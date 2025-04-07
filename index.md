@@ -1,8 +1,4 @@
 ---
-layout: default
-title: Home
+layout: home
+title: Manjusha's blog
 ---
-
-# Welcome!
-
-This is a sample site using GitHub Pages and the *minima* Jekyll theme.
