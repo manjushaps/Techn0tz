@@ -1,4 +1,4 @@
 ---
-layout: home
+layout: Home
 title: Manjusha's blog
 ---
