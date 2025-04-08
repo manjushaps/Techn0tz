@@ -1,7 +1,6 @@
 title: My Sample Blog
-description: A blog using Jekyll and Github
-author: Manjusha
-remote_theme: pages-themes/architect
+remote_theme: jekyll/minima
 
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
