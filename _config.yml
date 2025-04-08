@@ -1,2 +1,7 @@
 title: My Sample Blog
-theme: jekyll-theme-minima
+remote_theme: jekyll/minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
