@@ -1,8 +1,6 @@
 title: My Sample Blog
-remote_theme: page-theme/architect@v0.2.0
+remote_theme: page-theme/architect
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
-
