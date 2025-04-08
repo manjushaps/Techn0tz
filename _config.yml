@@ -1,5 +1,5 @@
 title: My Sample Blog
-remote_theme: jekyll/minima
+remote_theme: pages-themes/merlot
 
 plugins:
   - jekyll-feed
