@@ -1,5 +1,5 @@
 title: My Sample Blog
-remote_theme: page-theme/architect
+remote_theme: page-themes/architect
 
 plugins:
   - jekyll-feed
