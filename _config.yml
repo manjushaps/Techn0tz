@@ -1,5 +1,6 @@
 title: My Sample Blog
 remote_theme: pages-themes/merlot
+baseurl: "sample-blog"
 
 plugins:
   - jekyll-feed
