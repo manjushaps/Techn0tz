@@ -2,5 +2,6 @@ title: My Sample Blog
 remote_theme: page-themes/architect
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
