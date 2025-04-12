@@ -1,5 +1,5 @@
 title: My Sample Blog
-remote_theme: pages-themes/architect
+remote_theme: pages-themes/dinky
 baseurl: "/sample-blog"
 
 plugins:
