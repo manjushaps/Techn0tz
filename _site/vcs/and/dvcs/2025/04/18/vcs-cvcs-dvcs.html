@@ -1,0 +1,101 @@
+<p>In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where <strong>Version Control Systems (VCS)</strong> come in.</p>
+
+<p>This post explains the basics of VCS, differences between <strong>Centralized</strong> and <strong>Distributed</strong> systems</p>
+
+<hr />
+
+<h2 id="-what-is-version-control-system">🧾 What is Version Control System?</h2>
+
+<p>A <strong>Version Control System (VCS)</strong> is a tool that helps developers <strong>track changes in code</strong>, <strong>collaborate effectively</strong>, <strong>experiment safely using branches</strong>, and <strong>revert to previous versions</strong> if something goes wrong.</p>
+
+<h3 id="️-imagine-youre-part-of-a-high-profile-investigation">🕵️ Imagine you’re part of a high-profile investigation…</h3>
+
+<p>Every document related to the investigation — updates, evidence, and changes — is crucial and must be recorded in a <strong>master case file</strong>. This file evolves over time and needs to be updated consistently throughout the process.</p>
+
+<p>That’s exactly what a <strong>Version Control System (VCS)</strong> does in software development.</p>
+
+<p>It records detailed notes, timestamps, author information, and every change made — allowing you to go back to any previous version when needed. It also enables <strong>multiple detectives (developers)</strong> to collaborate on the same case without overwriting each other’s work.</p>
+
+<hr />
+
+<h2 id="️-centralized-version-control-cvcs">🗂️ Centralized Version Control (CVCS)</h2>
+
+<p>In a <strong>Centralized Version Control System</strong>, there is one single <strong>central repository</strong> where all versions of code are stored. Developers connect to this central server to get the latest version of the code or to make updates.</p>
+
+<p>✅ Advantages:</p>
+<ul>
+  <li>Simple and easy to set up</li>
+  <li>Everyone works on the same central version</li>
+</ul>
+
+<p>⚠️ Disadvantages:</p>
+<ul>
+  <li>Requires constant internet connection</li>
+  <li>If the central server fails, you lose access to everything</li>
+</ul>
+
+<p><strong>Examples</strong>: SVN (Subversion), CVS</p>
+
+<hr />
+
+<h2 id="-decentralized-version-control-dvcs">🔄 Decentralized Version Control (DVCS)</h2>
+
+<p>In a <strong>Distributed Version Control System</strong>, every developer has a <strong>complete copy of the codebase</strong>, including its full history. This allows for better collaboration, offline access, and safer experimentation.</p>
+
+<p>✅ Advantages:</p>
+<ul>
+  <li>Work offline with full project history</li>
+  <li>Fast operations (commits,merges)</li>
+  <li>No single point of failure</li>
+</ul>
+
+<p>⚠️ Disadvantages:</p>
+<ul>
+  <li>More complex branching/merging (initially)</li>
+</ul>
+
+<p><strong>Examples</strong>: Git, Mercurial</p>
+
+<hr />
+
+<h2 id="-summary">📄 Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Feature</th>
+      <th style="text-align: left">CVCS</th>
+      <th style="text-align: left">DVCS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Central Repository</td>
+      <td style="text-align: left">Yes</td>
+      <td style="text-align: left">No</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Full History Locally</td>
+      <td style="text-align: left">No</td>
+      <td style="text-align: left">Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Offline Work</td>
+      <td style="text-align: left">Limited</td>
+      <td style="text-align: left">Fully Supported</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Collaboration Model</td>
+      <td style="text-align: left">Linear, centralized</td>
+      <td style="text-align: left">Distributed, flexible</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Examples</td>
+      <td style="text-align: left">SVN, CVS</td>
+      <td style="text-align: left">Git, Mercurial</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
