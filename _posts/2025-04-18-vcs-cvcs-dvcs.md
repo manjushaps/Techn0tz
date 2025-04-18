@@ -59,7 +59,7 @@ In a **Distributed Version Control System**, every developer has a **complete co
 ## 📄 Summary
 
 | Feature                   | CVCS                     | DVCS                      |
-|---------------------------|--------------------------|---------------------------|
+|:-------------------------:|:------------------------:|:-------------------------:|
 | Central Repository        | Yes                      | No                        |
 | Full History Locally      | No                       | Yes                       |
 | Offline Work              | Limited                  | Fully Supported           |
