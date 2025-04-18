@@ -1,6 +1,7 @@
-title: My Sample Blog
+title: Techn0tz
+description: Exploring the world of Technology
 remote_theme: pages-themes/dinky
-baseurl: "/sample-blog"
+baseurl: "/Techn0tz"
 
 plugins:
   - jekyll-feed
