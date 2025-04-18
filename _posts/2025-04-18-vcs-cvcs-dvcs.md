@@ -38,3 +38,33 @@ In a **Centralized Version Control System**, there is one single **central repos
 
 **Examples**: SVN (Subversion), CVS
 
+---
+
+## 🔄 Decentralized Version Control (DVCS)
+
+In a **Distributed Version Control System**, every developer has a **complete copy of the codebase**, including its full history. This allows for better collaboration, offline access, and safer experimentation.
+
+✅ Advantages:
+- Work offline with full project history
+- Fast operations (commits,merges)
+- No single point of failure
+
+⚠️ Disadvantages:
+- More complex branching/merging (initially)
+
+**Examples**: Git, Mercurial
+
+---
+
+## 📄 Summary
+
+| Feature                   | CVCS                     | DVCS                      |
+|---------------------------|--------------------------|---------------------------|
+| Central Repository        | Yes                      | No                        |
+| Full History Locally      | No                       | Yes                       |
+| Offline Work              | Limited                  | Fully Supported           |
+| Collaboration Model       | Linear, centralized      | Distributed, flexible     |
+| Examples                  | SVN, CVS                 | Git, Mercurial            |
+
+---
+
