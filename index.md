@@ -3,7 +3,7 @@ layout: default
 title: Welcome
 ---
 
-<h1>Welcome to My Blog</h1>
+<h1>Welcome to Techn0tz blog</h1>
 
 <ul>
   {% for post in site.posts %}

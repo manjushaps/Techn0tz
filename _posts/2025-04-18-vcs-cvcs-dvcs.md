@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Version Control: The Backbone of Modern Development"
 date: 2025-04-18
 categories: VCS and DVCS
@@ -77,3 +77,9 @@ In a **Distributed Version Control System**, every developer has a **complete co
 > ☁️ In the ***Centralized Version Control***, the server is the boss - if it goes down, no server, no service! *Time for a coffee!*☕
 >
 > 🌏 **Distributed VCS** like Git gives each developer a full copy of the repository — work offline, experiment freely, and break stuff without fear!
+
+---
+
+> ## 🔜 **Next on Techn0tz**
+>
+> 🛸 **Git** - commands and workflows
