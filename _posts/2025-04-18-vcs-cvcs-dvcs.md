@@ -58,18 +58,22 @@ In a **Distributed Version Control System**, every developer has a **complete co
 
 ## 📄 Summary
 
-| Feature                    | CVCS                      | DVCS                      |
-|:---------------------------|:--------------------------|:--------------------------|
-| Central Repository         | Yes                       | No                        |
-| Full History Locally       | No                        | Yes                       |
-| Offline Work               | Limited                   | Fully Supported           |
-| Collaboration Model        | Linear, centralized       | Distributed, flexible     |
-| Examples                   | SVN, CVS                  | Git, Mercurial            |
+| **Feature**             | **CVCS**               | **DVCS**                 |
+|-------------------------|------------------------|---------------------------|
+| Central Repository      | Yes                    | No                        |
+| Full History Locally    | No                     | Yes                       |
+| Offline Work            | Limited                | Fully Supported           |
+| Collaboration Model     | Linear, centralized    | Distributed, flexible     |
+| Examples                | SVN, CVS               | Git, Mercurial            |
+
 
 ---
 
-> 💡 **Did you know?**
+> ### 📦 **TechNuggetz**
+> #### 📆 **Did you know?**  
+>   
+> 🧠 ***Version Control*** dates back to the 1970s — with **RCS** and **SCCS**!
 >
-> 🧠 **Version Control** dates back to 1970s - with RCS and SCCS
+> ☁️ In the ***Centralized Version Control***, the server is the boss - if it goes down, no server, no service! *Time for a coffee!*☕
 >
->
+> 🌏 **Distributed VCS** like Git gives each developer a full copy of the repository — work offline, experiment freely, and break stuff without fear!
