@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-04-19T15:14:30+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Version Control: The Backbone of Modern Development</title><link href="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html" rel="alternate" type="text/html" title="Version Control: The Backbone of Modern Development" /><published>2025-04-18T00:00:00+05:30</published><updated>2025-04-18T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs</id><content type="html" xml:base="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"><![CDATA[<p>In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where <strong>Version Control Systems (VCS)</strong> come in.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-04-19T15:22:03+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Version Control: The Backbone of Modern Development</title><link href="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html" rel="alternate" type="text/html" title="Version Control: The Backbone of Modern Development" /><published>2025-04-18T00:00:00+05:30</published><updated>2025-04-18T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs</id><content type="html" xml:base="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"><![CDATA[<p>In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where <strong>Version Control Systems (VCS)</strong> come in.</p>
 
 <p>This post explains the basics of VCS, differences between <strong>Centralized</strong> and <strong>Distributed</strong> systems</p>
 
@@ -100,8 +100,7 @@
 <hr />
 
 <blockquote>
-  <h3 id="-technuggetz">📦 <strong>TechNuggetz</strong></h3>
-  <h4 id="-did-you-know">📆 <strong>Did you know?</strong></h4>
+  <h3 id="-technuggetz----did-you-know">📦 <strong>TechNuggetz</strong> - 📆 <strong>Did you know?</strong></h3>
 
   <p>🧠 <strong><em>Version Control</em></strong> dates back to the 1970s — with <strong>RCS</strong> and <strong>SCCS</strong>!</p>
 

@@ -69,8 +69,7 @@ In a **Distributed Version Control System**, every developer has a **complete co
 
 ---
 
-> ### 📦 **TechNuggetz**
-> #### 📆 **Did you know?**  
+> ### 📦 **TechNuggetz** - 📆 **Did you know?**  
 >   
 > 🧠 ***Version Control*** dates back to the 1970s — with **RCS** and **SCCS**!
 >
