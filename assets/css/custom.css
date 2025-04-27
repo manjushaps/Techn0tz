@@ -17,3 +17,11 @@
 .post-nav-minimal a:hover {
   text-decoration:underline darkred;
 }
+
+/* Just change normal links */
+a {
+  color:orangered; /* Darker color */
+  font-weight: bold; /* Make links bolder */
+  text-decoration: none; /* Remove underline */
+}
+
