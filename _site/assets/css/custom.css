@@ -20,7 +20,7 @@
 
 /* Just change normal links */
 a {
-  color:orangered; /* Darker color */
+  color:crimson; /* Darker color */
   font-weight: bold; /* Make links bolder */
   text-decoration: none; /* Remove underline */
 }
