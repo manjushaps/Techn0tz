@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Git Series: Part 2 - Remote repository - GitHub | Techn0tz</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Git Series: Part 2 - Remote repository - GitHub" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🔗 Missed Part-1 ? 👉 Checkout Git Series: Part1 - Local Version Control to get familiar with the basics of Git and how local version control works" />
+<meta property="og:description" content="🔗 Missed Part-1 ? 👉 Checkout Git Series: Part1 - Local Version Control to get familiar with the basics of Git and how local version control works" />
+<link rel="canonical" href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html" />
+<meta property="og:url" content="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html" />
+<meta property="og:site_name" content="Techn0tz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-25T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Git Series: Part 2 - Remote repository - GitHub" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-25T00:00:00+05:30","datePublished":"2025-04-25T00:00:00+05:30","description":"🔗 Missed Part-1 ? 👉 Checkout Git Series: Part1 - Local Version Control to get familiar with the basics of Git and how local version control works","headline":"Git Series: Part 2 - Remote repository - GitHub","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"},"url":"http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/Techn0tz/assets/css/style.css?v=d38f0c4666ea5096d88211ecce8aeb816c642381">
+    <link rel="stylesheet" href="/Techn0tz/assets/css/custom.css?v=1">
+    <script src="/Techn0tz/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/Techn0tz/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Techn0tz</h1>
+        <p class="header"></p>
+
+        <ul>
+          
+          <li><a class="buttons github" href="https://github.com/manjushaps/techn0tz">View On GitHub</a></li>
+        </ul>
+
+        
+          <p class="header">This project is maintained by <a class="header name" href="https://github.com/manjushaps">manjushaps</a></p>
+        
+
+        
+      </header>
+
+      <section>
+        <article class="post">
+          
+            <!-- Top navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"> Previous: Git Series: Part 1 - Local Version Control</a> |
+  
+
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!-- Post content -->
+            <h2 id="-missed-part-1-">🔗 Missed Part-1 ?</h2>
+<p>👉 Checkout <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1">Git Series: Part1 - Local Version Control</a> to get familiar with the basics of Git and how local version control works</p>
+
+<hr />
+<h1 id="️-remote-repository">🗺️ Remote Repository</h1>
+<h2 id="-connecting-your-local-repository-to-github">🔄 Connecting Your Local Repository to GitHub</h2>
+<p>Once you’ve committed your changes locally, the next step is to upload (push) your code to GitHub so it’s safely stored online and ready to share or collaborate</p>
+
+<h2 id="-creating-a-new-repository-on-github">🆕 Creating a new repository on GitHub</h2>
+<ul>
+  <li>Go to <strong>https://github.com</strong></li>
+  <li>Click on ➕ New repository</li>
+  <li>Fill in:
+    <ul>
+      <li>Repository name (e.g., my-demo-project)</li>
+      <li>Choose Public or Private</li>
+      <li>DO NOT check “Initialize this repository with a README” (since you already have local files)</li>
+    </ul>
+  </li>
+  <li>Click Create repository</li>
+</ul>
+
+<h2 id="-link-repo-to-github-and-pushing-to-remote-repository">💻 Link Repo to GitHub and pushing to remote repository</h2>
+
+<ul>
+  <li>Before pushing to GitHub, use <strong><code class="language-plaintext highlighter-rouge">git branch -M main</code></strong> command - to rename Git’s default branch <strong>master to main</strong>
+    <ul>
+      <li>Git defaults to master, but GitHub uses main, so renaming it helps avoid conflicts when pushing to GitHub.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/your-username/my-demo-project.git</code></strong> command- Git adds a new connection to the remote repo
+    <ul>
+      <li><em>Replace URL with your actual repository URL</em></li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">git push -u origin main</code></strong> command - the changes that are committed locally are sent to the <em>main branch</em> of your GiHub’s repository
+    <ul>
+      <li>-u or –set upstream is used only for initial push</li>
+      <li>Next time when you want to push to same branch just use <em>git push</em></li>
+    </ul>
+  </li>
+</ul>
+
+<p>🥇<strong>Now your code is live on GitHub! You can visit your repository URL to confirm</strong></p>
+
+<hr />
+<h1 id="️-remote-repository-workflow">🖋️ Remote repository workflow</h1>
+
+<p>After setting up your project with LVC,the remote repository workflow connects it to a remote server like GitHub for collaboration and version control</p>
+
+<p><img src="/Techn0tz/assets/images/Remote_workflow.png" alt="Remote Workflow" width="500" height="auto" /></p>
+
+<hr />
+<h1 id="example-snapshot-pushing-git-project-to-github">💡Example Snapshot: Pushing Git project to GitHub</h1>
+
+<p>The first snapshot is from <strong>Part-1</strong>, given just for reference</p>
+
+<p><img src="/Techn0tz/assets/images/LVC_snapshot.png" alt="LVC_example" /></p>
+
+<p>continues below, complementing the remote repository snapshot for a complete view of the Git workflow.</p>
+
+<p><img src="/Techn0tz/assets/images/Push_file_to_GitHub.png" alt="GitHub_example" /></p>
+
+<p>The above snapshot visualizes the workflow involved in linking your local repository with a remote platform like GitHub, enabling version control beyond your machine.</p>
+
+<h2 id="-result">✅ Result</h2>
+<p>🏆<strong><em>Go to your GitHub repo and you’ll see hello.txt uploaded — success!</em></strong></p>
+
+<hr />
+<h1 id="-full-git-journey-summary">📑 Full Git Journey Summary</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Step</strong></th>
+      <th><strong>Action</strong></th>
+      <th><strong>Command</strong></th>
+      <th><strong>Stage</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Initialize Git</td>
+      <td>git init</td>
+      <td>Working Directory</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Create/edit files</td>
+      <td>echo, touch, nano, etc.</td>
+      <td>Working Directory</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Stage changes</td>
+      <td>git add</td>
+      <td>Staging Area</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Commit changes</td>
+      <td>git commit -m “…”</td>
+      <td>Local Repository</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Create GitHub repo</td>
+      <td>(via web browser)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Link local repo to GitHub</td>
+      <td>git remote add origin URL</td>
+      <td>Remote Setup</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Push to GitHub</td>
+      <td>git push -u origin main</td>
+      <td>Remote Repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h1 id="-git-quick-fixes--what-it-says-vs-what-it-means">🔎 Git Quick Fixes- What it says vs What it means</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Git Says</strong></th>
+      <th><strong>What It Means</strong></th>
+      <th><strong>What You Can Do</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nothing to commit, working tree clean</td>
+      <td>You’ve staged and committed everything already</td>
+      <td>You’re up to date! Keep working</td>
+    </tr>
+    <tr>
+      <td>fatal: not a git repository</td>
+      <td>You’re in a folder that isn’t initialized</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git init</code></em> or go to the right folder</td>
+    </tr>
+    <tr>
+      <td>no changes added to commit</td>
+      <td>You changed files but didn’t stage them yet</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git add filename</code></em></td>
+    </tr>
+    <tr>
+      <td>Your branch is ahead of ‘origin/main’</td>
+      <td>You have local commits not pushed to GitHub</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
+    </tr>
+    <tr>
+      <td>error: failed to push some refs</td>
+      <td>Usually a mismatch with GitHub (e.g., branch name)</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull origin main --rebase</code></em>, then <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
+    </tr>
+    <tr>
+      <td>merge conflict in filename</td>
+      <td>Git found conflicting changes between branches</td>
+      <td>Open the file, resolve conflicts, then <em><code class="language-plaintext highlighter-rouge">git add + git commit</code></em></td>
+    </tr>
+    <tr>
+      <td>rejected - non-fast-forward</td>
+      <td>Remote repo changed and your local copy is outdated</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull</code></em> first, resolve conflicts, then push again</td>
+    </tr>
+    <tr>
+      <td>fatal: remote origin already exists</td>
+      <td>You’ve already added a remote</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git remote set-url origin &lt;url&gt;</code></em> to change it</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<h1 id="-conclusion">📃 Conclusion</h1>
+
+<p>Understanding the Git workflow — from your working directory to the remote repository — is the foundation of effective version control.In this post we saw  how files move through Local version control to online using real commands, visuals, and hands-on examples.
+Whether you’re working solo or collaborating with others, mastering these Git basics will help you track changes, avoid mistakes, and push your projects confidently to GitHub</p>
+
+<hr />
+<h2 id="-technuggetz---did-you-know">💡 TechNuggetz - Did you Know?</h2>
+
+<blockquote>
+  <p>📇 GitHub isn’t a centralized VCS — it’s a remote platform where teams collaborate using Git. The version control stays distributed, even when using GitHub.</p>
+
+  <p>⭐ The name GitHub comes from <strong>Git</strong> (the version control tool) + <strong>Hub</strong> (a central place where developers collaborate). It’s literally a hub for Git repositories!</p>
+
+  <p>💭 Always run <strong><code class="language-plaintext highlighter-rouge">git pull</code></strong> before <strong><code class="language-plaintext highlighter-rouge">git push</code></strong> to avoid merge surprises when working in teams!</p>
+</blockquote>
+
+<hr />
+<h2 id="--next-on-techn0tz">🔜  Next on Techn0tz..</h2>
+
+<p><em>Git - Branching and Merging</em></p>
+
+
+
+            <!-- Bottom navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"> Previous: Git Series: Part 1 - Local Version Control</a> |
+  
+
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!--<div class="post-nav-minimal">
+              
+                <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"> Previous: Git Series: Part 1 - Local Version Control</a> |
+              
+          
+              <a href="/Techn0tz/"> Up: Home</a> 
+
+              
+            </div>-->
+          
+        </article>
+      </section>
+
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>

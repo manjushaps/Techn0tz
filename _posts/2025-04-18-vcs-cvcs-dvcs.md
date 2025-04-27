@@ -10,11 +10,11 @@ This post explains the basics of VCS, differences between **Centralized** and **
 
 ---
 
-## 🧾 What is Version Control System?
+# 🧾 What is Version Control System?
 
 A **Version Control System (VCS)** is a tool that helps developers **track changes in code**, **collaborate effectively**, **experiment safely using branches**, and **revert to previous versions** if something goes wrong.
 
-### 🕵️ Imagine you're part of a high-profile investigation...
+## 🕵️ Imagine you're part of a high-profile investigation...
 
 Every document related to the investigation — updates, evidence, and changes — is crucial and must be recorded in a **master case file**. This file evolves over time and needs to be updated consistently throughout the process.
 
@@ -24,7 +24,7 @@ It records detailed notes, timestamps, author information, and every change made
 
 ---
 
-## 🗂️ Centralized Version Control (CVCS)
+# 🗂️ Centralized Version Control (CVCS)
 
 In a **Centralized Version Control System**, there is one single **central repository** where all versions of code are stored. Developers connect to this central server to get the latest version of the code or to make updates.
 
@@ -40,7 +40,7 @@ In a **Centralized Version Control System**, there is one single **central repos
 
 ---
 
-## 🔄 Decentralized Version Control (DVCS)
+# 🔄 Decentralized Version Control (DVCS)
 
 In a **Distributed Version Control System**, every developer has a **complete copy of the codebase**, including its full history. This allows for better collaboration, offline access, and safer experimentation.
 
@@ -56,7 +56,7 @@ In a **Distributed Version Control System**, every developer has a **complete co
 
 ---
 
-## 📄 Summary
+# 📄 Summary
 
 | **Feature**             | **CVCS**               | **DVCS**                 |
 |-------------------------|------------------------|---------------------------|
@@ -69,7 +69,7 @@ In a **Distributed Version Control System**, every developer has a **complete co
 
 ---
 
-> ### 📦 **TechNuggetz** - 📆 **Did you know?**  
+> ## 📦 **TechNuggetz** - 📆 **Did you know?**  
 >   
 > 🧠 ***Version Control*** dates back to the 1970s — with **RCS** and **SCCS**!
 >

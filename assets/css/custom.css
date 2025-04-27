@@ -1,0 +1,19 @@
+.post-nav-minimal {
+  background-color: #f0f0f0; /* light grey */
+  padding: 10px;
+  text-align: center;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.post-nav-minimal a {
+  color:crimson;
+  font-weight: lighter;
+  text-decoration:none;
+  margin: 0 10px;
+}
+
+.post-nav-minimal a:hover {
+  text-decoration:underline darkred;
+}
