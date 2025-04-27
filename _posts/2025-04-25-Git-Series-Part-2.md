@@ -6,7 +6,7 @@ categories: Git
 ---
 
 ## 🔗 Missed Part-1 ?
-👉 Checkout [Git Series: Part1 - Local Version Control]({{ site.baseurl}}/git/2025/04/25/Git-Series-Part-1) to get familiar with the basics of Git and how local version control works
+👉 Checkout **[Git Series: Part1 - Local Version Control]({{ site.baseurl}}/git/2025/04/25/Git-Series-Part-1)** to get familiar with the basics of Git and how local version control works
 
 ---
 # 🗺️ Remote Repository

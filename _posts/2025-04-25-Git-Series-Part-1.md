@@ -81,6 +81,6 @@ The snapshot below provides a practical example of how to create a new directory
 >
 > 🪄 Autosave magic! Use **`git stash`** to save your work-in-progress without a commit. Come back later with **`git stash pop`** and pick up right where you left off!
 
-Continue.. 👉 To push your Git project to Remote repository like GitHub [Part-2:Remote-repository]({{ site.baseurl }}/git/2025/04/25/Git-Series-Part-2)
+Continue.. **👉 To push your Git project to Remote repository like GitHub [Part-2:Remote-repository]({{ site.baseurl }}/git/2025/04/25/Git-Series-Part-2)**
 
 ***Happy Learning!***
