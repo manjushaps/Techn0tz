@@ -122,4 +122,4 @@ Branching and merging are powerful features of Git that help you work on differe
 
 ---
 ## 🔜 Next on Techn0tz
-*Homebrew (Package Manager for macOS)*
+*Developing a GitHub page using Jekyll on windows*
