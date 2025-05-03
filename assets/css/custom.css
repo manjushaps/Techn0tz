@@ -33,4 +33,18 @@ img {
   padding: 5px;
 }
 
+/* Target only the Feedback link */
+header a[href*="/feedback/"] {
+  font-size: 18px;
+  font-weight: bold;
+  color:deeppink;
+}
+
+/* Optional hover effect */
+header a[href*="/feedback/"]:hover {
+  text-decoration-color: firebrick;
+}
+
+
+
 
