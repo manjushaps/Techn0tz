@@ -18,6 +18,7 @@ This creates a chain — each commit pointing to the one before it — forming a
 For example.. **`[C0]<--[C1]<--[C2]....`** (C - commits, C0 is the initial commit, C1 is the next and so on)
 
 ---
+
 # 📌Commit internals
 With that foundation, it’s time to explore what actually makes up a Git commit.
 
@@ -49,6 +50,7 @@ When you modify one of the files and commit again, Git handles the changes effic
 The **main branch (and HEAD)** points to the latest commit, effectively continuing the chain of commits. This structure — consisting of snapshots (blobs), directories (trees), and commit objects — is what makes Git branching so fast and powerful. Each new commit doesn’t duplicate data but rather builds upon the existing objects, making the entire process efficient and scalable.
 
 ---
+
 # 🔗 Git Branching and Merging
 Git branching is a powerful feature that allows you to develop features, fix bugs, or experiment with new ideas in isolation — without affecting the main codebase.
 
@@ -74,6 +76,7 @@ The table below shows a typical workflow and commit relationships
 | F          | main        | C, E                 | Merge commit: merges `feature` back into `main`                                                     |
 
 ---
+
 # 📜 Git Branching and Merging commands
 
 | **Command**                     | **Description**                                 |
@@ -94,6 +97,7 @@ The table below shows a typical workflow and commit relationships
 | `git log --graph --oneline`       | Shows a visual history of commits with branches/merges    |
 
 ---
+
 # 💡Branching and Merging in Action: A Snapshot Example
 Below is a snapshot demonstrating how branching and merging work using Git commands.
 
@@ -104,10 +108,12 @@ Below is a snapshot demonstrating how branching and merging work using Git comma
 You can use the **`start index.html`** command (on Windows) to open the developed HTML page in your default browser and check if the merged content displays correctly.
 
 ---
+
 # 📃 Conclusion
 Branching and merging are powerful features of Git that help you work on different tasks without affecting the main code. By creating branches, you can develop features safely, and by merging, you bring everything back together. With regular practice, these commands will become second nature and make your workflow smoother and more organized.
 
 ---
+
 ## 🧠 TechNuggetz - Did you know?
 >
 > 🔧 A **hotfix branch** is a special-purpose Git branch used to quickly patch a bug in production without waiting for ongoing development to finish.
@@ -121,5 +127,6 @@ Branching and merging are powerful features of Git that help you work on differe
 > 🧭 **`git switch`** is a newer and clearer alternative to **`git checkout`** for switching branches.
 
 ---
+
 ## 🔜 Next on Techn0tz
 *Developing a GitHub page using Jekyll on windows*

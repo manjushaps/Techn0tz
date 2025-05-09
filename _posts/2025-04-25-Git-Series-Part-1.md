@@ -10,6 +10,7 @@ categories: Git
 In the last post, we explored Version Control System and their types — CVCS and DVCS. Now, let’s zoom into the most popular DVCS tool in the world: **Git** — and see how it powers modern development.
 
 ---
+
 # 📜 What is Git?
 
 Git is open source Distributed Version Control Sytem which allows developers
@@ -21,6 +22,7 @@ Git is open source Distributed Version Control Sytem which allows developers
 > ⌛Think of Git as your **projects time machine** - but smarter, faster and made for team work
 
 ---
+
 # 🎯 Core Components Git and LVC worflow
 
 The Git workflow is a step-by-step process that defines how changes in a project move from your local machine to a shared, remote repository like GitHub. Mastering this flow helps you collaborate smoothly and  manage versions efficiently.
@@ -69,6 +71,7 @@ The snapshot below provides a practical example of how to create a new directory
 ![LVC_example]({{ site.baseurl }}/assets/images/LVC_snapshot.png)
 
 ---
+
 ## 🧠 TechNuggetz - Did you Know?
 
 > ⌛ **Git** was built by **Linus Torvalds - Founder of Linus** in just 2 weeks in 2005 - Iconic!

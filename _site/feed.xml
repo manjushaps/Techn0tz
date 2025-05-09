@@ -1,4 +1,244 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-05-03T09:42:09+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Git Series: Part 3 - Branching and Merging</title><link href="http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3.html" rel="alternate" type="text/html" title="Git Series: Part 3 - Branching and Merging" /><published>2025-05-02T00:00:00+05:30</published><updated>2025-05-02T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3.html"><![CDATA[<h1 id="how-git-stores-data">📁How Git stores Data?</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-05-09T13:58:55+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Jekyll Series: Part 1 - Jekyll Setup on Windows</title><link href="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html" rel="alternate" type="text/html" title="Jekyll Series: Part 1 - Jekyll Setup on Windows" /><published>2025-05-09T00:00:00+05:30</published><updated>2025-05-09T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1</id><content type="html" xml:base="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html"><![CDATA[<h1 id="-introduction">📃 Introduction</h1>
+<p>To build a clean, fast, and code-friendly blog or portfolio, <strong>Jekyll</strong> is one of the most versatile tools you can use. As a powerful, Ruby-based static site generator, Jekyll seamlessly integrates with GitHub Pages, allowing you to transform plain text files—written in Markdown or Liquid templates—into fully functional websites without the complexity of databases or server-side scripting.</p>
+
+<p>However, to ensure a smooth and efficient workflow, it’s crucial to set up your local Jekyll environment correctly—especially on Windows, where a few additional steps are necessary. This guide will walk you through the complete setup process, providing clear instructions and troubleshooting tips to help you get Jekyll running flawlessly on your Windows system.</p>
+
+<hr />
+
+<h1 id="-system-requirements-and-prerequisites">📑 System Requirements and Prerequisites</h1>
+<p>Before setting up Jekyll on Windows, let’s make sure your system is prepared with the right tools and environment. This will ensure a smooth installation experience.</p>
+
+<h2 id="-minimum-system-requirements">💻 Minimum System Requirements</h2>
+<ul>
+  <li><em>Operating System</em> - Windows 10 or 11 (64 bit preferred)</li>
+  <li><em>Admin Access</em> - To install system-level tools</li>
+  <li><em>Basic Terminal Familarity</em> - A little command line experience</li>
+</ul>
+
+<h2 id="️-tools-youll-need">🛠️ Tools You’ll Need</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Tool</strong></th>
+      <th><strong>Purpose</strong></th>
+      <th><strong>Official Site</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Git</td>
+      <td>Version control, terminal access</td>
+      <td><a href="https://git-scm.com">git-scm.com</a></td>
+    </tr>
+    <tr>
+      <td>Ruby (DevKit)</td>
+      <td>Needed to run Jekyll</td>
+      <td><a href="https://rubyinstaller.org">rubyinstaller.org</a></td>
+    </tr>
+    <tr>
+      <td>Bundler</td>
+      <td>Manages Ruby gems</td>
+      <td>Comes with Ruby or via <code class="language-plaintext highlighter-rouge">gem install</code></td>
+    </tr>
+    <tr>
+      <td>Jekyll</td>
+      <td>Static site generator</td>
+      <td>Installed via RubyGems</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Tip - Git Bash or Command Prompt can be used for setup. Pick whichever you’re more comfortable with</strong></p>
+</blockquote>
+
+<h2 id="-environment-used-for-this-guide">💭 Environment Used For This Guide</h2>
+<blockquote>
+  <p>To ensure a clean and reproducible setup process, I used <strong>Windows Sandbox</strong> — a secure, disposable virtual environment available in Windows 10/11 Pro—for testing and capturing screenshots during installation.</p>
+
+  <p>This allowed me to document each step from a fresh state without interfering with my main system.</p>
+
+  <p>However, you can follow all the steps below directly on your regular Windows system. Using Windows Sandbox is completely optional and only used here for demonstration purposes.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="-step-by-step-installation-on-windows">📝 Step-by-Step Installation (on Windows)</h1>
+<h2 id="git-installation">Git Installation</h2>
+<ul>
+  <li>Download <strong>Git</strong> from <strong>https://git-scm.com</strong>
+    <ul>
+      <li>Save the installer to your Downloads folder.</li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li><strong>Run Git Installer</strong>
+    <ul>
+      <li>Double-click the downloaded .exe file to start the installation.</li>
+      <li>You will see the welcome screen:
+<img src="/Techn0tz/assets/images/Git_welcome.png" alt="Git welcome" width="400" height="auto" /></li>
+    </ul>
+  </li>
+  <li><strong>Choose Installation Options</strong>
+    <ul>
+      <li>You will be guided through several setup screens.</li>
+      <li>The key options you may want to customize are:
+        <ul>
+          <li>Default Editor: Choose your preferred text editor (e.g., Visual Studio Code)</li>
+          <li>Adjusting PATH: Ensure “Git from the command line and 3rd-party software” is selected.</li>
+          <li>Line Ending Conversion: Use recommended settings for Windows.</li>
+          <li><strong>Tip: Here are the choices I made during setup:</strong>
+<img src="/Techn0tz/assets/images/Default_editor.png" alt="Git welcome" width="400" height="auto" /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Installation in Progress</strong>
+    <ul>
+      <li>Click “Install”, and the setup will begin extracting files to the specified folders.
+<img src="/Techn0tz/assets/images/During_install.png" alt="During install" width="400" height="auto" /></li>
+    </ul>
+  </li>
+  <li><strong>Verify Git Installation</strong>
+    <ul>
+      <li>Once installation is complete, open Git Bash (from Start Menu or Desktop).</li>
+      <li>Run the <strong><code class="language-plaintext highlighter-rouge">git --version</code></strong> command to verify installation 
+<img src="/Techn0tz/assets/images/git_version_afterinstall.png" alt="Git version" width="600" height="auto" /></li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="ruby--devkit-installation">Ruby + DevKit Installation</h2>
+<ul>
+  <li>Download <strong>Ruby + DevKit(x64)</strong> from <strong>https://rubyinstaller.org</strong>
+    <ul>
+      <li>When installing Ruby on Windows, choosing the version with <strong>DevKit (Development Kit)</strong> is essential.</li>
+      <li><strong>DevKit</strong> is a set of tools that allow Ruby to build and use gems (libraries) with native extensions (written in C/C++). This is especially important for tools like Jekyll, which rely on such gems.This DevKit is required for Windows but not for macOS or Linux.</li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li><strong>Run Ruby + DevKit installer</strong>
+    <ul>
+      <li>Run the downloaded .exe file to start the installation.</li>
+      <li>This is the welcome screen of ruby
+<img src="/Techn0tz/assets/images/Ruby_installation.png" alt="Ruby install" width="500" height="auto" /></li>
+    </ul>
+  </li>
+  <li><strong>Installation Options and DevKit Setup</strong>
+    <ul>
+      <li>Make sure to check “Add Ruby to PATH” — this is essential for using Ruby from the command line.</li>
+      <li>Choose the recommended installation directory for smooth setup.
+<img src="/Techn0tz/assets/images/Ruby_exec_path.png" alt="exec path" width="500" height="auto" /></li>
+      <li>Check the option to run <strong>ridk install</strong>, which will open a terminal
+<img src="/Techn0tz/assets/images/Run_ridk_install.png" alt="terminal1" width="500" height="auto" /></li>
+      <li>Running <strong>ridk install</strong> - Two-Step Process
+        <ul>
+          <li>After installation, you will be prompted with three options for setting up MSYS2.</li>
+          <li>Choose Option 3: <strong>MSYS2 and MINGW development toolchain</strong>.
+<img src="/Techn0tz/assets/images/Ruby_installer_terminal.png" alt="terminal1" width="500" height="auto" /></li>
+          <li>A second set of options will appear.</li>
+          <li>If unsure, press ENTER to continue with the recommended setup.
+<img src="/Techn0tz/assets/images/Ruby_install_final.png" alt="terminal2" width="500" height="auto" /></li>
+          <li>This completes the setup of MSYS2 and the MINGW toolchain.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Verify Ruby Installation</strong>
+    <ul>
+      <li>Once installation is complete, open Git Bash (from Start Menu or Desktop).</li>
+      <li>Run the <strong><code class="language-plaintext highlighter-rouge">ruby -v</code></strong> command to verify installation 
+<img src="/Techn0tz/assets/images/Ruby_version.png" alt="Ruby version" width="600" height="auto" /></li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="bundler-and-jekyll-installation">Bundler and Jekyll Installation</h2>
+<ol>
+  <li>In Command Prompt or Git Bash terminal, run <strong><code class="language-plaintext highlighter-rouge">gem install bundler jekyll</code></strong>.
+    <ul>
+      <li>This the installation screen.
+<img src="/Techn0tz/assets/images/bundler_jekyll_install.png" alt="bundler" width="500" height="auto" />
+Continues….
+<img src="/Techn0tz/assets/images/bundler_jekyll_final.png" alt="Jekyll" width="500" height="auto" /></li>
+    </ul>
+  </li>
+  <li>Verify bundler and jekyll installation
+    <ul>
+      <li>Run <strong><code class="language-plaintext highlighter-rouge">bundler -v</code></strong> and <strong><code class="language-plaintext highlighter-rouge">jekyll -v</code></strong> commands to verify installation
+<img src="/Techn0tz/assets/images/bundler_jekyll_version.png" alt="BJ version" width="500" height="auto" /></li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong><em>Tip: If Git, Ruby, Bundler, or Jekyll are not recognized, ensure their installation paths are correctly added to your system’s Environment Variables. Manually add them if missing, and verify with the respective version commands.</em></strong></p>
+</blockquote>
+
+<hr />
+
+<h1 id="-common-jekyll-issues">🔧 Common Jekyll issues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Issue</strong></th>
+      <th><strong>Error Message</strong></th>
+      <th><strong>Cause</strong></th>
+      <th><strong>Solution</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Command not recognized</td>
+      <td><code class="language-plaintext highlighter-rouge">'jekyll'</code> is not recognized</td>
+      <td>Ruby not in PATH</td>
+      <td>Add Ruby to system PATH (Environment Variables).</td>
+    </tr>
+    <tr>
+      <td>Port conflict</td>
+      <td>Address already in use - <code class="language-plaintext highlighter-rouge">127.0.0.1:4000</code></td>
+      <td>Port 4000 in use</td>
+      <td>Use <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --port 4001</code>.</td>
+    </tr>
+    <tr>
+      <td>Blank page in browser</td>
+      <td>No content at <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000</code></td>
+      <td>HTTPS instead of HTTP</td>
+      <td>Use <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/</code> (HTTP).</td>
+    </tr>
+    <tr>
+      <td>Ruby installer blocked</td>
+      <td>Security prompt or failure</td>
+      <td>Windows SmartScreen</td>
+      <td>Disable SmartScreen temporarily.</td>
+    </tr>
+    <tr>
+      <td>Gem installation fails</td>
+      <td>Could not find a valid gem <code class="language-plaintext highlighter-rouge">'jekyll'</code></td>
+      <td>Missing/Outdated Bundler</td>
+      <td>Run <code class="language-plaintext highlighter-rouge">gem install bundler</code> and <code class="language-plaintext highlighter-rouge">gem update --system</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="-conclusion">📄 Conclusion</h1>
+<p>You have successfully set up your local environment for Jekyll on Windows, with <strong>Git, Ruby, Bundler, and Jekyll</strong> installed and verified. This foundational setup ensures you are ready to build, customize, and launch your own static site with confidence. In the next post, you’ll learn how to create, run, and manage a Jekyll site locally—transforming your installation into a fully functional website.</p>
+
+<blockquote>
+  <p><strong><em>Stay tuned to 🚀Techn0tz for the next step in your Jekyll journey.</em></strong></p>
+</blockquote>]]></content><author><name></name></author><category term="Jekyll" /><summary type="html"><![CDATA[📃 Introduction To build a clean, fast, and code-friendly blog or portfolio, Jekyll is one of the most versatile tools you can use. As a powerful, Ruby-based static site generator, Jekyll seamlessly integrates with GitHub Pages, allowing you to transform plain text files—written in Markdown or Liquid templates—into fully functional websites without the complexity of databases or server-side scripting.]]></summary></entry><entry><title type="html">Git Series: Part 3 - Branching and Merging</title><link href="http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3.html" rel="alternate" type="text/html" title="Git Series: Part 3 - Branching and Merging" /><published>2025-05-02T00:00:00+05:30</published><updated>2025-05-02T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/05/02/Git-Series-Part-3.html"><![CDATA[<h1 id="how-git-stores-data">📁How Git stores Data?</h1>
 <p>Before diving into branching, it’s important to understand how Git stores your project.
 Unlike some older version control systems, Git doesn’t store data as a series of changesets or differences. Instead, it stores your project as a series of snapshots.</p>
 
@@ -11,6 +251,7 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 <p>For example.. <strong><code class="language-plaintext highlighter-rouge">[C0]&lt;--[C1]&lt;--[C2]....</code></strong> (C - commits, C0 is the initial commit, C1 is the next and so on)</p>
 
 <hr />
+
 <h1 id="commit-internals">📌Commit internals</h1>
 <p>With that foundation, it’s time to explore what actually makes up a Git commit.</p>
 
@@ -48,6 +289,7 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 <p>The <strong>main branch (and HEAD)</strong> points to the latest commit, effectively continuing the chain of commits. This structure — consisting of snapshots (blobs), directories (trees), and commit objects — is what makes Git branching so fast and powerful. Each new commit doesn’t duplicate data but rather builds upon the existing objects, making the entire process efficient and scalable.</p>
 
 <hr />
+
 <h1 id="-git-branching-and-merging">🔗 Git Branching and Merging</h1>
 <p>Git branching is a powerful feature that allows you to develop features, fix bugs, or experiment with new ideas in isolation — without affecting the main codebase.</p>
 
@@ -113,6 +355,7 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 </table>
 
 <hr />
+
 <h1 id="-git-branching-and-merging-commands">📜 Git Branching and Merging commands</h1>
 
 <table>
@@ -182,6 +425,7 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 </table>
 
 <hr />
+
 <h1 id="branching-and-merging-in-action-a-snapshot-example">💡Branching and Merging in Action: A Snapshot Example</h1>
 <p>Below is a snapshot demonstrating how branching and merging work using Git commands.</p>
 
@@ -192,10 +436,12 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 <p>You can use the <strong><code class="language-plaintext highlighter-rouge">start index.html</code></strong> command (on Windows) to open the developed HTML page in your default browser and check if the merged content displays correctly.</p>
 
 <hr />
+
 <h1 id="-conclusion">📃 Conclusion</h1>
 <p>Branching and merging are powerful features of Git that help you work on different tasks without affecting the main code. By creating branches, you can develop features safely, and by merging, you bring everything back together. With regular practice, these commands will become second nature and make your workflow smoother and more organized.</p>
 
 <hr />
+
 <h2 id="-technuggetz---did-you-know">🧠 TechNuggetz - Did you know?</h2>
 <blockquote>
 
@@ -211,213 +457,14 @@ Unlike some older version control systems, Git doesn’t store data as a series 
 </blockquote>
 
 <hr />
+
 <h2 id="-next-on-techn0tz">🔜 Next on Techn0tz</h2>
-<p><em>Developing a GitHub page using Jekyll on windows</em></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[📁How Git stores Data? Before diving into branching, it’s important to understand how Git stores your project. Unlike some older version control systems, Git doesn’t store data as a series of changesets or differences. Instead, it stores your project as a series of snapshots.]]></summary></entry><entry><title type="html">Git Series: Part 2 - Remote repository - GitHub</title><link href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html" rel="alternate" type="text/html" title="Git Series: Part 2 - Remote repository - GitHub" /><published>2025-04-25T00:00:00+05:30</published><updated>2025-04-25T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"><![CDATA[<h2 id="-missed-part-1-">🔗 Missed Part-1 ?</h2>
-<p>👉 Checkout <strong><a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1">Git Series: Part1 - Local Version Control</a></strong> to get familiar with the basics of Git and how local version control works</p>
-
-<hr />
-<h1 id="️-remote-repository">🗺️ Remote Repository</h1>
-<h2 id="-connecting-your-local-repository-to-github">🔄 Connecting Your Local Repository to GitHub</h2>
-<p>Once you’ve committed your changes locally, the next step is to upload (push) your code to GitHub so it’s safely stored online and ready to share or collaborate</p>
-
-<h2 id="-creating-a-new-repository-on-github">🆕 Creating a new repository on GitHub</h2>
-<ul>
-  <li>Go to <strong>https://github.com</strong></li>
-  <li>Click on ➕ New repository</li>
-  <li>Fill in:
-    <ul>
-      <li>Repository name (e.g., my-demo-project)</li>
-      <li>Choose Public or Private</li>
-      <li>DO NOT check “Initialize this repository with a README” (since you already have local files)</li>
-    </ul>
-  </li>
-  <li>Click Create repository</li>
-</ul>
-
-<h2 id="-link-repo-to-github-and-pushing-to-remote-repository">💻 Link Repo to GitHub and pushing to remote repository</h2>
-
-<ul>
-  <li>Before pushing to GitHub, use <strong><code class="language-plaintext highlighter-rouge">git branch -M main</code></strong> command - to rename Git’s default branch <strong>master to main</strong>
-    <ul>
-      <li>Git defaults to master, but GitHub uses main, so renaming it helps avoid conflicts when pushing to GitHub.</li>
-    </ul>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/your-username/my-demo-project.git</code></strong> command- Git adds a new connection to the remote repo
-    <ul>
-      <li><em>Replace URL with your actual repository URL</em></li>
-    </ul>
-  </li>
-  <li><strong><code class="language-plaintext highlighter-rouge">git push -u origin main</code></strong> command - the changes that are committed locally are sent to the <em>main branch</em> of your GiHub’s repository
-    <ul>
-      <li>-u or –set upstream is used only for initial push</li>
-      <li>Next time when you want to push to same branch just use <em>git push</em></li>
-    </ul>
-  </li>
-</ul>
-
-<p>🥇<strong>Now your code is live on GitHub! You can visit your repository URL to confirm</strong></p>
-
-<hr />
-<h1 id="️-remote-repository-workflow">🖋️ Remote repository workflow</h1>
-
-<p>After setting up your project with LVC,the remote repository workflow connects it to a remote server like GitHub for collaboration and version control</p>
-
-<p><img src="/Techn0tz/assets/images/Remote_workflow.png" alt="Remote Workflow" width="500" height="auto" /></p>
-
-<hr />
-<h1 id="example-snapshot-pushing-git-project-to-github">💡Example Snapshot: Pushing Git project to GitHub</h1>
-
-<p>The first snapshot is from <strong>Part-1</strong>, given just for reference</p>
-
-<p><img src="/Techn0tz/assets/images/LVC_snapshot.png" alt="LVC_example" /></p>
-
-<p>continues below, complementing the remote repository snapshot for a complete view of the Git workflow.</p>
-
-<p><img src="/Techn0tz/assets/images/Push_file_to_GitHub.png" alt="GitHub_example" /></p>
-
-<p>The above snapshot visualizes the workflow involved in linking your local repository with a remote platform like GitHub, enabling version control beyond your machine.</p>
-
-<h2 id="-result">✅ Result</h2>
-<p>🏆<strong><em>Go to your GitHub repo and you’ll see hello.txt uploaded — success!</em></strong></p>
-
-<hr />
-<h1 id="-full-git-journey-summary">📑 Full Git Journey Summary</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Step</strong></th>
-      <th><strong>Action</strong></th>
-      <th><strong>Command</strong></th>
-      <th><strong>Stage</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Initialize Git</td>
-      <td>git init</td>
-      <td>Working Directory</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Create/edit files</td>
-      <td>echo, touch, nano, etc.</td>
-      <td>Working Directory</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Stage changes</td>
-      <td>git add</td>
-      <td>Staging Area</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Commit changes</td>
-      <td>git commit -m “…”</td>
-      <td>Local Repository</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Create GitHub repo</td>
-      <td>(via web browser)</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Link local repo to GitHub</td>
-      <td>git remote add origin URL</td>
-      <td>Remote Setup</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Push to GitHub</td>
-      <td>git push -u origin main</td>
-      <td>Remote Repository</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-<h1 id="-git-quick-fixes--what-it-says-vs-what-it-means">🔎 Git Quick Fixes- What it says vs What it means</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Git Says</strong></th>
-      <th><strong>What It Means</strong></th>
-      <th><strong>What You Can Do</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>nothing to commit, working tree clean</td>
-      <td>You’ve staged and committed everything already</td>
-      <td>You’re up to date! Keep working</td>
-    </tr>
-    <tr>
-      <td>fatal: not a git repository</td>
-      <td>You’re in a folder that isn’t initialized</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git init</code></em> or go to the right folder</td>
-    </tr>
-    <tr>
-      <td>no changes added to commit</td>
-      <td>You changed files but didn’t stage them yet</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git add filename</code></em></td>
-    </tr>
-    <tr>
-      <td>Your branch is ahead of ‘origin/main’</td>
-      <td>You have local commits not pushed to GitHub</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
-    </tr>
-    <tr>
-      <td>error: failed to push some refs</td>
-      <td>Usually a mismatch with GitHub (e.g., branch name)</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull origin main --rebase</code></em>, then <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
-    </tr>
-    <tr>
-      <td>merge conflict in filename</td>
-      <td>Git found conflicting changes between branches</td>
-      <td>Open the file, resolve conflicts, then <em><code class="language-plaintext highlighter-rouge">git add + git commit</code></em></td>
-    </tr>
-    <tr>
-      <td>rejected - non-fast-forward</td>
-      <td>Remote repo changed and your local copy is outdated</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull</code></em> first, resolve conflicts, then push again</td>
-    </tr>
-    <tr>
-      <td>fatal: remote origin already exists</td>
-      <td>You’ve already added a remote</td>
-      <td>Run <em><code class="language-plaintext highlighter-rouge">git remote set-url origin &lt;url&gt;</code></em> to change it</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr />
-<h1 id="-conclusion">📃 Conclusion</h1>
-
-<p>Understanding the Git workflow — from your working directory to the remote repository — is the foundation of effective version control.In this post we saw  how files move through Local version control to online using real commands, visuals, and hands-on examples.
-Whether you’re working solo or collaborating with others, mastering these Git basics will help you track changes, avoid mistakes, and push your projects confidently to GitHub</p>
-
-<hr />
-<h2 id="-technuggetz---did-you-know">💡 TechNuggetz - Did you Know?</h2>
-
-<blockquote>
-  <p>📇 GitHub isn’t a centralized VCS — it’s a remote platform where teams collaborate using Git. The version control stays distributed, even when using GitHub.</p>
-
-  <p>⭐ The name GitHub comes from <strong>Git</strong> (the version control tool) + <strong>Hub</strong> (a central place where developers collaborate). It’s literally a hub for Git repositories!</p>
-
-  <p>💭 Always run <strong><code class="language-plaintext highlighter-rouge">git pull</code></strong> before <strong><code class="language-plaintext highlighter-rouge">git push</code></strong> to avoid merge surprises when working in teams!</p>
-</blockquote>
-
-<hr />
-<h2 id="--next-on-techn0tz">🔜  Next on Techn0tz..</h2>
-
-<p><em>Git - Branching and Merging</em></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[🔗 Missed Part-1 ? 👉 Checkout Git Series: Part1 - Local Version Control to get familiar with the basics of Git and how local version control works]]></summary></entry><entry><title type="html">Git Series: Part 1 - Local Version Control</title><link href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html" rel="alternate" type="text/html" title="Git Series: Part 1 - Local Version Control" /><published>2025-04-25T00:00:00+05:30</published><updated>2025-04-25T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"><![CDATA[<h1 id="-from-vcs-to-git">🚀 From VCS to Git</h1>
+<p><em>Developing a GitHub page using Jekyll on windows</em></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[📁How Git stores Data? Before diving into branching, it’s important to understand how Git stores your project. Unlike some older version control systems, Git doesn’t store data as a series of changesets or differences. Instead, it stores your project as a series of snapshots.]]></summary></entry><entry><title type="html">Git Series: Part 1 - Local Version Control</title><link href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html" rel="alternate" type="text/html" title="Git Series: Part 1 - Local Version Control" /><published>2025-04-25T00:00:00+05:30</published><updated>2025-04-25T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"><![CDATA[<h1 id="-from-vcs-to-git">🚀 From VCS to Git</h1>
 
 <p>In the last post, we explored Version Control System and their types — CVCS and DVCS. Now, let’s zoom into the most popular DVCS tool in the world: <strong>Git</strong> — and see how it powers modern development.</p>
 
 <hr />
+
 <h1 id="-what-is-git">📜 What is Git?</h1>
 
 <p>Git is open source Distributed Version Control Sytem which allows developers</p>
@@ -433,6 +480,7 @@ Whether you’re working solo or collaborating with others, mastering these Git 
 </blockquote>
 
 <hr />
+
 <h1 id="-core-components-git-and-lvc-worflow">🎯 Core Components Git and LVC worflow</h1>
 
 <p>The Git workflow is a step-by-step process that defines how changes in a project move from your local machine to a shared, remote repository like GitHub. Mastering this flow helps you collaborate smoothly and  manage versions efficiently.</p>
@@ -493,6 +541,7 @@ Whether you’re working solo or collaborating with others, mastering these Git 
 <p><img src="/Techn0tz/assets/images/LVC_snapshot.png" alt="LVC_example" /></p>
 
 <hr />
+
 <h2 id="-technuggetz---did-you-know">🧠 TechNuggetz - Did you Know?</h2>
 
 <blockquote>
@@ -509,7 +558,215 @@ Whether you’re working solo or collaborating with others, mastering these Git 
 
 <p>Continue.. <strong>👉 To push your Git project to Remote repository like GitHub <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-2">Part-2:Remote-repository</a></strong></p>
 
-<p><strong><em>Happy Learning!</em></strong></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[🚀 From VCS to Git]]></summary></entry><entry><title type="html">Version Control: The Backbone of Modern Development</title><link href="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html" rel="alternate" type="text/html" title="Version Control: The Backbone of Modern Development" /><published>2025-04-18T00:00:00+05:30</published><updated>2025-04-18T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs</id><content type="html" xml:base="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"><![CDATA[<p>In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where <strong>Version Control Systems (VCS)</strong> come in.</p>
+<p><strong><em>Happy Learning!</em></strong></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[🚀 From VCS to Git]]></summary></entry><entry><title type="html">Git Series: Part 2 - Remote repository - GitHub</title><link href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html" rel="alternate" type="text/html" title="Git Series: Part 2 - Remote repository - GitHub" /><published>2025-04-25T00:00:00+05:30</published><updated>2025-04-25T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2</id><content type="html" xml:base="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"><![CDATA[<h2 id="-missed-part-1-">🔗 Missed Part-1 ?</h2>
+<p>👉 Checkout <strong><a href="/Techn0tz/git/2025/04/25/Git-Series-Part-1">Git Series: Part1 - Local Version Control</a></strong> to get familiar with the basics of Git and how local version control works</p>
+
+<hr />
+
+<h1 id="️-remote-repository">🗺️ Remote Repository</h1>
+<h2 id="-connecting-your-local-repository-to-github">🔄 Connecting Your Local Repository to GitHub</h2>
+<p>Once you’ve committed your changes locally, the next step is to upload (push) your code to GitHub so it’s safely stored online and ready to share or collaborate</p>
+
+<h2 id="-creating-a-new-repository-on-github">🆕 Creating a new repository on GitHub</h2>
+<ul>
+  <li>Go to <strong>https://github.com</strong></li>
+  <li>Click on ➕ New repository</li>
+  <li>Fill in:
+    <ul>
+      <li>Repository name (e.g., my-demo-project)</li>
+      <li>Choose Public or Private</li>
+      <li>DO NOT check “Initialize this repository with a README” (since you already have local files)</li>
+    </ul>
+  </li>
+  <li>Click Create repository</li>
+</ul>
+
+<h2 id="-link-repo-to-github-and-pushing-to-remote-repository">💻 Link Repo to GitHub and pushing to remote repository</h2>
+
+<ul>
+  <li>Before pushing to GitHub, use <strong><code class="language-plaintext highlighter-rouge">git branch -M main</code></strong> command - to rename Git’s default branch <strong>master to main</strong>
+    <ul>
+      <li>Git defaults to master, but GitHub uses main, so renaming it helps avoid conflicts when pushing to GitHub.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/your-username/my-demo-project.git</code></strong> command- Git adds a new connection to the remote repo
+    <ul>
+      <li><em>Replace URL with your actual repository URL</em></li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">git push -u origin main</code></strong> command - the changes that are committed locally are sent to the <em>main branch</em> of your GiHub’s repository
+    <ul>
+      <li>-u or –set upstream is used only for initial push</li>
+      <li>Next time when you want to push to same branch just use <em>git push</em></li>
+    </ul>
+  </li>
+</ul>
+
+<p>🥇<strong>Now your code is live on GitHub! You can visit your repository URL to confirm</strong></p>
+
+<hr />
+
+<h1 id="️-remote-repository-workflow">🖋️ Remote repository workflow</h1>
+
+<p>After setting up your project with LVC,the remote repository workflow connects it to a remote server like GitHub for collaboration and version control</p>
+
+<p><img src="/Techn0tz/assets/images/Remote_workflow.png" alt="Remote Workflow" width="500" height="auto" /></p>
+
+<hr />
+
+<h1 id="example-snapshot-pushing-git-project-to-github">💡Example Snapshot: Pushing Git project to GitHub</h1>
+
+<p>The first snapshot is from <strong>Part-1</strong>, given just for reference</p>
+
+<p><img src="/Techn0tz/assets/images/LVC_snapshot.png" alt="LVC_example" /></p>
+
+<p>continues below, complementing the remote repository snapshot for a complete view of the Git workflow.</p>
+
+<p><img src="/Techn0tz/assets/images/Push_file_to_GitHub.png" alt="GitHub_example" /></p>
+
+<p>The above snapshot visualizes the workflow involved in linking your local repository with a remote platform like GitHub, enabling version control beyond your machine.</p>
+
+<h2 id="-result">✅ Result</h2>
+<p>🏆<strong><em>Go to your GitHub repo and you’ll see hello.txt uploaded — success!</em></strong></p>
+
+<hr />
+
+<h1 id="-full-git-journey-summary">📑 Full Git Journey Summary</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Step</strong></th>
+      <th><strong>Action</strong></th>
+      <th><strong>Command</strong></th>
+      <th><strong>Stage</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Initialize Git</td>
+      <td>git init</td>
+      <td>Working Directory</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Create/edit files</td>
+      <td>echo, touch, nano, etc.</td>
+      <td>Working Directory</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Stage changes</td>
+      <td>git add</td>
+      <td>Staging Area</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Commit changes</td>
+      <td>git commit -m “…”</td>
+      <td>Local Repository</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Create GitHub repo</td>
+      <td>(via web browser)</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Link local repo to GitHub</td>
+      <td>git remote add origin URL</td>
+      <td>Remote Setup</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Push to GitHub</td>
+      <td>git push -u origin main</td>
+      <td>Remote Repository</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="-git-quick-fixes--what-it-says-vs-what-it-means">🔎 Git Quick Fixes- What it says vs What it means</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Git Says</strong></th>
+      <th><strong>What It Means</strong></th>
+      <th><strong>What You Can Do</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nothing to commit, working tree clean</td>
+      <td>You’ve staged and committed everything already</td>
+      <td>You’re up to date! Keep working</td>
+    </tr>
+    <tr>
+      <td>fatal: not a git repository</td>
+      <td>You’re in a folder that isn’t initialized</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git init</code></em> or go to the right folder</td>
+    </tr>
+    <tr>
+      <td>no changes added to commit</td>
+      <td>You changed files but didn’t stage them yet</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git add filename</code></em></td>
+    </tr>
+    <tr>
+      <td>Your branch is ahead of ‘origin/main’</td>
+      <td>You have local commits not pushed to GitHub</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
+    </tr>
+    <tr>
+      <td>error: failed to push some refs</td>
+      <td>Usually a mismatch with GitHub (e.g., branch name)</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull origin main --rebase</code></em>, then <em><code class="language-plaintext highlighter-rouge">git push</code></em></td>
+    </tr>
+    <tr>
+      <td>merge conflict in filename</td>
+      <td>Git found conflicting changes between branches</td>
+      <td>Open the file, resolve conflicts, then <em><code class="language-plaintext highlighter-rouge">git add + git commit</code></em></td>
+    </tr>
+    <tr>
+      <td>rejected - non-fast-forward</td>
+      <td>Remote repo changed and your local copy is outdated</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git pull</code></em> first, resolve conflicts, then push again</td>
+    </tr>
+    <tr>
+      <td>fatal: remote origin already exists</td>
+      <td>You’ve already added a remote</td>
+      <td>Run <em><code class="language-plaintext highlighter-rouge">git remote set-url origin &lt;url&gt;</code></em> to change it</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="-conclusion">📃 Conclusion</h1>
+
+<p>Understanding the Git workflow — from your working directory to the remote repository — is the foundation of effective version control.In this post we saw  how files move through Local version control to online using real commands, visuals, and hands-on examples.
+Whether you’re working solo or collaborating with others, mastering these Git basics will help you track changes, avoid mistakes, and push your projects confidently to GitHub</p>
+
+<hr />
+<h2 id="-technuggetz---did-you-know">💡 TechNuggetz - Did you Know?</h2>
+
+<blockquote>
+  <p>📇 GitHub isn’t a centralized VCS — it’s a remote platform where teams collaborate using Git. The version control stays distributed, even when using GitHub.</p>
+
+  <p>⭐ The name GitHub comes from <strong>Git</strong> (the version control tool) + <strong>Hub</strong> (a central place where developers collaborate). It’s literally a hub for Git repositories!</p>
+
+  <p>💭 Always run <strong><code class="language-plaintext highlighter-rouge">git pull</code></strong> before <strong><code class="language-plaintext highlighter-rouge">git push</code></strong> to avoid merge surprises when working in teams!</p>
+</blockquote>
+
+<hr />
+
+<h2 id="--next-on-techn0tz">🔜  Next on Techn0tz..</h2>
+
+<p><em>Git - Branching and Merging</em></p>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[🔗 Missed Part-1 ? 👉 Checkout Git Series: Part1 - Local Version Control to get familiar with the basics of Git and how local version control works]]></summary></entry><entry><title type="html">Version Control: The Backbone of Modern Development</title><link href="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html" rel="alternate" type="text/html" title="Version Control: The Backbone of Modern Development" /><published>2025-04-18T00:00:00+05:30</published><updated>2025-04-18T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs</id><content type="html" xml:base="http://localhost:4000/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"><![CDATA[<p>In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where <strong>Version Control Systems (VCS)</strong> come in.</p>
 
 <p>This post explains the basics of VCS, differences between <strong>Centralized</strong> and <strong>Distributed</strong> systems</p>
 

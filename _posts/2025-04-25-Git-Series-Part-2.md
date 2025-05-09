@@ -9,6 +9,7 @@ categories: Git
 👉 Checkout **[Git Series: Part1 - Local Version Control]({{ site.baseurl}}/git/2025/04/25/Git-Series-Part-1)** to get familiar with the basics of Git and how local version control works
 
 ---
+
 # 🗺️ Remote Repository
 ## 🔄 Connecting Your Local Repository to GitHub
 Once you've committed your changes locally, the next step is to upload (push) your code to GitHub so it's safely stored online and ready to share or collaborate
@@ -35,6 +36,7 @@ Once you've committed your changes locally, the next step is to upload (push) yo
 🥇**Now your code is live on GitHub! You can visit your repository URL to confirm**
 
 ---
+
 # 🖋️ Remote repository workflow
 
 After setting up your project with LVC,the remote repository workflow connects it to a remote server like GitHub for collaboration and version control
@@ -42,6 +44,7 @@ After setting up your project with LVC,the remote repository workflow connects i
 <img src="{{ site.baseurl }}/assets/images/Remote_workflow.png" alt="Remote Workflow" width="500" height="auto">
 
 ---
+
 # 💡Example Snapshot: Pushing Git project to GitHub
 
 The first snapshot is from **Part-1**, given just for reference
@@ -58,6 +61,7 @@ The above snapshot visualizes the workflow involved in linking your local reposi
 🏆***Go to your GitHub repo and you’ll see hello.txt uploaded — success!***
 
 ---
+
 # 📑 Full Git Journey Summary
 
 | **Step** | **Action**                    | **Command**                   | **Stage**             |
@@ -71,6 +75,7 @@ The above snapshot visualizes the workflow involved in linking your local reposi
 |    7     | Push to GitHub                | git push -u origin main       | Remote Repository     |
 
 ---
+
 # 🔎 Git Quick Fixes- What it says vs What it means
 
 | **Git Says**                          | **What It Means**                                   | **What You Can Do**                                          |
@@ -85,6 +90,7 @@ The above snapshot visualizes the workflow involved in linking your local reposi
 | fatal: remote origin already exists   | You’ve already added a remote                       | Run *`git remote set-url origin <url>`* to change it            |
 
 ---
+
 # 📃 Conclusion
 
 Understanding the Git workflow — from your working directory to the remote repository — is the foundation of effective version control.In this post we saw  how files move through Local version control to online using real commands, visuals, and hands-on examples.
@@ -100,6 +106,7 @@ Whether you're working solo or collaborating with others, mastering these Git ba
 > 💭 Always run **`git pull`** before **`git push`** to avoid merge surprises when working in teams!
 
 ---
+
 ## 🔜  Next on Techn0tz..
 
 *Git - Branching and Merging* 

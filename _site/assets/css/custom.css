@@ -45,6 +45,22 @@ header a[href*="/feedback/"]:hover {
   text-decoration-color: firebrick;
 }
 
+/* Enhanced Blockquote Styling for Dinky Theme */
+blockquote {
+  border-left: 4px solid darkolivegreen;
+  padding: 0.8em 1.2em;
+  margin: 2em 0;
+  background-color: #f9f9f9;
+  color:#333;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+
 
 
 
