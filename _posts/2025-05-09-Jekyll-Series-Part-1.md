@@ -58,6 +58,7 @@ Before setting up Jekyll on Windows, let’s make sure your system is prepared w
   - Line Ending Conversion: Use recommended settings for Windows.
   - **Tip: Here are the choices I made during setup:**
   <img src="{{ site.baseurl }}/assets/images/Default_editor.png" alt="Git welcome" width="400" height="auto">
+  > **Tip** - If you are using VS Code as editor, ensure **VS Code** is installed in your system and proceed with **Git** installation   
 
 
 3. **Installation in Progress**

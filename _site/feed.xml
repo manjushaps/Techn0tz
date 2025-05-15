@@ -1,4 +1,277 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-05-09T13:58:55+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Jekyll Series: Part 1 - Jekyll Setup on Windows</title><link href="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html" rel="alternate" type="text/html" title="Jekyll Series: Part 1 - Jekyll Setup on Windows" /><published>2025-05-09T00:00:00+05:30</published><updated>2025-05-09T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1</id><content type="html" xml:base="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html"><![CDATA[<h1 id="-introduction">📃 Introduction</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/Techn0tz/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Techn0tz/" rel="alternate" type="text/html" /><updated>2025-05-15T16:22:07+05:30</updated><id>http://localhost:4000/Techn0tz/feed.xml</id><title type="html">Techn0tz</title><entry><title type="html">Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally</title><link href="http://localhost:4000/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2.html" rel="alternate" type="text/html" title="Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally" /><published>2025-05-15T00:00:00+05:30</published><updated>2025-05-15T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2</id><content type="html" xml:base="http://localhost:4000/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2.html"><![CDATA[<h1 id="-introduction">📃 Introduction</h1>
+<p><strong>🛸Welcome back to Techn0tz!</strong> In the previous post, we covered how to set up Git, Ruby, Bundler, and Jekyll on Windows. Now, it’s time to take the next step—building and previewing your first Jekyll site locally.</p>
+<ul>
+  <li>In this post, you will:
+    <ul>
+      <li>Create a new Jekyll site from scratch.</li>
+      <li>Understand the default folder structure of a Jekyll site.</li>
+      <li>Build and serve your site locally, previewing changes in real time.</li>
+      <li>Troubleshoot common issues.</li>
+      <li>By the end of this guide, you will have a fully functional Jekyll site running on your local server, ready for further customization.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong><em>🎈Let’s get started!</em></strong></p>
+
+<hr />
+
+<h1 id="-prerequisites">🎯 Prerequisites</h1>
+<ul>
+  <li>Before we begin, make sure you have completed the following:
+    <ul>
+      <li>Installed <strong>Git, Ruby, Bundler, and Jekyll</strong> on your Windows system. (If not, see <strong><a href="/Techn0tz/Jekyll/2025/05/09/Jekyll-Series-Part-1">Jekyll Series: Part1 - Jekyll setup on windows</a></strong>).</li>
+      <li>Have a basic understanding of the Command Line Interface (CLI).</li>
+    </ul>
+  </li>
+  <li>The screenshot below confirms the versions of Git, Ruby, Bundler, and Jekyll installed on your system.
+<img src="/Techn0tz/assets/images/git_bundle_jekyll_v.png" alt="gbj version" width="600" height="auto" /></li>
+</ul>
+
+<hr />
+
+<h1 id="-steps-to-build-jekyll-site-locally">📝 Steps to Build Jekyll Site Locally</h1>
+<h2 id="-step-1-initialize-your-jekyll-site">🌐 Step 1: Initialize Your Jekyll Site</h2>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">jekyll new myblog</code></strong> -  This command creates a new Jekyll site with all necessary files and folders pre-configured.
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">jekyll new</code></strong> - creates a new Jekyll site.</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">myblog</code></strong> - name of your site folder. You can replace <strong>myblog</strong> with any folder name.</li>
+    </ul>
+  </li>
+  <li><em>Screenshot</em> - Running <strong><code class="language-plaintext highlighter-rouge">jekyll new myblog</code></strong> command in Git Bash
+  <img src="/Techn0tz/assets/images/create_site.png" alt="site" width="600" height="auto" /></li>
+</ul>
+
+<blockquote>
+  <p><strong>Note</strong>: This post uses the default Jekyll site setup without any custom themes or configurations. The default site already includes an example post <strong>(2025-05-12-welcome-to-jekyll.md)</strong>.</p>
+</blockquote>
+
+<h2 id="-step-2-navigate-to-the-directory">🌐 Step 2: Navigate to the Directory</h2>
+<ul>
+  <li>Use <strong><code class="language-plaintext highlighter-rouge">cd myblog</code></strong> to enter the newly created site directory.
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">cd</code></strong> stands for change directory, this command moves to newly created folder <strong><code class="language-plaintext highlighter-rouge">myblog</code></strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><strong>Tip: Use <code class="language-plaintext highlighter-rouge">ls -R</code> command to view the complete jekyll folder structure</strong>.</p>
+</blockquote>
+
+<ul>
+  <li><em>Screenshot</em> - Running <strong><code class="language-plaintext highlighter-rouge">cd</code></strong> and <strong><code class="language-plaintext highlighter-rouge">ls -R</code></strong> command in Git Bash 
+<img src="/Techn0tz/assets/images/tree_struct.png" alt="folders" width="600" height="auto" /></li>
+</ul>
+
+<p>The directory structure is:</p>
+<ul>
+  <li><strong><em>_config.yml</em></strong> - Main configuration file for your Jekyll site.</li>
+  <li><strong><em>_posts/</em></strong> - Directory for your blog posts (Markdown files).</li>
+  <li><strong><em>Gemfile</em></strong> -  Lists dependencies (gems) for your site.</li>
+  <li><strong><em>Gemfile.lock</em></strong> -  Auto-generated by Bundler (dependency lock).</li>
+  <li><strong><em>404.html</em></strong> - Default “Page not found” template.</li>
+  <li><strong><em>about.markdown</em></strong> - Example “About Page”.</li>
+  <li><strong><em>index.markdown</em></strong> - Homepage of your site.</li>
+</ul>
+
+<h2 id="-step-3-install-dependencies">🌐 Step 3: Install Dependencies</h2>
+<ul>
+  <li>After navigating to your Jekyll site directory, install all the dependencies using <strong>Bundler</strong>.
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">bundle install</code></strong> - This command automatically reads the <strong>GemFile</strong> and install all the required plugins and supporting libraries for your Jekyll site.</li>
+    </ul>
+  </li>
+  <li><em>Screenshot</em> - Running <strong><code class="language-plaintext highlighter-rouge">bundle intall</code></strong> command in Git Bash
+<img src="/Techn0tz/assets/images/bundle_install.png" alt="bundle" width="600" height="auto" /></li>
+</ul>
+
+<h2 id="-step-4-build-and-serve-jekyll-site-locally">🌐 Step 4: Build and Serve Jekyll Site Locally</h2>
+<ul>
+  <li>Now all the dependencies are installed locally, the next step is to build and preview your Jekyll site locally on your system.
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></strong> - This command builds the site using the correct version of Jekyll specified for your Gemfile and starts a local development server <strong>(http://localhost:4000)</strong> by default.</li>
+    </ul>
+  </li>
+  <li><em>Screenshot</em> - Running <strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code></strong> command in Git Bash
+<img src="/Techn0tz/assets/images/bundle_exec.png" alt="bundle_exec" width="600" height="auto" /></li>
+</ul>
+
+<h3 id="-accessing-local-jekyll-site">🔎 Accessing Local Jekyll Site</h3>
+<ul>
+  <li>Open your web browser.</li>
+  <li>Go to <strong>http://localhost:4000 (or http://127.0.0.1:4000)</strong>.</li>
+  <li>You should see your default Jekyll site running.
+<img src="/Techn0tz/assets/images/jekyll_test_result.png" alt="jekyll_result" width="600" height="auto" /></li>
+</ul>
+
+<hr />
+
+<h2 id="-understanding-how-changes-work">🧭 Understanding How Changes Work</h2>
+<ul>
+  <li>Now that your Jekyll site is up and running, let’s see how it responds to changes. Jekyll automatically rebuilds the site when files are changed.</li>
+  <li><strong>Example: Modify the index.md file (change the title, as shown in the screenshot below).</strong></li>
+  <li>
+    <p><em>Screenshot</em> - Editing index.md file
+<img src="/Techn0tz/assets/images/change_md.png" alt="md update" width="600" height="auto" /></p>
+  </li>
+  <li>Immediately, the Jekyll terminal will display that the site has been rebuilt.</li>
+  <li>
+    <p><em>Screenshot</em> - The terminal showing updated changes.
+<img src="/Techn0tz/assets/images/change_status_terminal.png" alt="terminal" width="600" height="auto" /></p>
+  </li>
+  <li>Refresh your web browser (http://localhost:4000), and you will instantly see the updated site.</li>
+  <li><em>Screenshot</em> - Updated site preview
+<img src="/Techn0tz/assets/images/after_update_md.png" alt="md update" width="600" height="auto" /></li>
+</ul>
+
+<hr />
+
+<h2 id="-understanding-markdown-files-and-jekyll-_posts-directory">💡 Understanding Markdown files and Jekyll _posts Directory</h2>
+<ul>
+  <li>With your site running, it’s time to learn how to create content. Jekyll uses <strong>Markdown (.md)</strong> files to create and format blog posts.
+    <ul>
+      <li><strong>Markdown (.md)</strong> is a light-weight markup language that uses simple symbols to format text.</li>
+      <li>Jekyll use Markdown files to create and format blog posts.</li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # Heading 1
+  ## Heading 2
+  - Bullet list item
+  **Bold Text**
+  [Link Text](https://example.com)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="-jekylls-_posts-directory">📁 Jekyll’s _posts Directory</h3>
+<ul>
+  <li>This directory stores all your blog posts.</li>
+  <li><strong>Naming convention:  YYYY-MM-DD-post-title.md (eg. 2025-05-12-welcome-to-jekyll.md)</strong>.</li>
+  <li>
+    <p>Each post must begin with <strong>Front Matter (YAML format)</strong>, which provides essential details about the post.</p>
+  </li>
+  <li><strong>Example for Front Matter:</strong>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>layout: post
+title: "My First Blog Post"
+date: 2025-05-10 
+categories: Git
+</code></pre></div>    </div>
+  </li>
+  <li>The <strong>layout</strong>: post specifies that this is a blog post.</li>
+  <li>The <strong>title, date, and categories</strong> fields describe your post.</li>
+</ul>
+
+<hr />
+
+<h2 id="️-creating-your-first-blog-post-using-vs-code">‼️ Creating Your First Blog Post using VS Code</h2>
+<ul>
+  <li>Open the _posts directory in <strong>VS Code</strong> (or your preferred text editor).</li>
+  <li>Create a new <strong>.md</strong> file with the format: <strong>YYYY-MM-DD-post-title.md</strong>.</li>
+  <li>Add front matter and content using markdown syntax.</li>
+  <li>Write your post content below the Front Matter using Markdown.</li>
+  <li>Save the file.</li>
+  <li>
+    <p>Refresh your local site <strong>(http://localhost:4000)</strong> to see your new post appear.</p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Creating a new post in VS Code.
+<img src="/Techn0tz/assets/images/VScode_new post.png" alt="VScode" width="600" height="auto" /></p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Git Bash terminal showing site rebuild after adding the post.
+<img src="/Techn0tz/assets/images/new_post_terminal.png" alt="np_terminal1" width="600" height="auto" /></p>
+  </li>
+  <li><em>Screenshot</em> - Jekyll site displaying the new post and its content.
+<img src="/Techn0tz/assets/images/WP_new_post.png" alt="webpage" width="600" height="auto" />
+<img src="/Techn0tz/assets/images/new_post_content.png" alt="post_content" width="600" height="auto" /></li>
+</ul>
+
+<hr />
+
+<h2 id="-troubleshooting-common-issues">💭 Troubleshooting Common Issues</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Issue</strong></th>
+      <th><strong>Cause</strong></th>
+      <th><strong>Solution</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">Could not locate Gemfile or .bundle/ directory</code></strong></td>
+      <td>Not in site directory.</td>
+      <td>Ensure you are in your Jekyll site folder before running <strong><code class="language-plaintext highlighter-rouge">bundle install</code></strong>.</td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">Could not find webrick</code> (Older Ruby versions)</strong></td>
+      <td>Missing dependency.</td>
+      <td>Run <strong><code class="language-plaintext highlighter-rouge">bundle add webrick</code></strong> and try again.</td>
+    </tr>
+    <tr>
+      <td><strong>Site not showing changes</strong></td>
+      <td>Browser cache or server not running.</td>
+      <td>Make sure the local server is running. Clear browser cache and refresh.</td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">Permission denied</code> (Windows)</strong></td>
+      <td>Lack of admin rights.</td>
+      <td>Run Git Bash as Administrator.</td>
+    </tr>
+    <tr>
+      <td><strong><code class="language-plaintext highlighter-rouge">Address already in use</code> error</strong></td>
+      <td>Port 4000 is occupied.</td>
+      <td>Use <strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --port 4001</code></strong> to use a different port.</td>
+    </tr>
+    <tr>
+      <td><strong>Markdown not rendering properly</strong></td>
+      <td>Incorrect Markdown syntax.</td>
+      <td>Verify your Markdown file has the correct syntax and Front Matter format.</td>
+    </tr>
+    <tr>
+      <td><strong>Post not displayed in local site</strong></td>
+      <td>Post has a future date</td>
+      <td>Use <strong><code class="language-plaintext highlighter-rouge">--future</code></strong> flag to preview future posts: <strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --future</code></strong>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-conclusion">📜 Conclusion</h2>
+<ul>
+  <li>🎉Congratulations! You have successfully:
+    <ul>
+      <li>Built and served your first Jekyll site locally.</li>
+      <li>Learned how Jekyll automatically updates your site with changes.</li>
+      <li>Understood Markdown syntax and the _posts directory.</li>
+      <li>Created your first blog post using Markdown.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="-technuggetz---did-you-know">🧠 Technuggetz - Did you Know?</h2>
+<blockquote>
+
+  <p>⚡<strong>Instant update with Live Reload</strong> - Use <strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --livereload</code></strong> for automatic page reloads in your browser whenever you make changes.</p>
+
+  <p>⚡The <strong><code class="language-plaintext highlighter-rouge">bundle</code></strong> command used to manage your project’s dependencies defined in the <strong>Gemfile</strong>, while <strong>Bundler</strong> is the Ruby gem (package) that provides the <strong><code class="language-plaintext highlighter-rouge">bundle</code></strong> command. Use them appropriately!</p>
+
+  <p>⚡<strong>Quickly create a post</strong> - Run <strong><code class="language-plaintext highlighter-rouge">bundle exec jekyll post "Your New Post Title"</code></strong> to instantly generate a new postin your _posts directory.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>In the next post, you will learn how to push your Jekyll site to GitHub Pages and make it accessible online.</p>
+
+  <p><strong><em>Stay tuned to 🚀Techn0tz!! for the next step in your Jekyll journey.</em></strong></p>
+</blockquote>]]></content><author><name></name></author><category term="Jekyll" /><summary type="html"><![CDATA[📃 Introduction 🛸Welcome back to Techn0tz! In the previous post, we covered how to set up Git, Ruby, Bundler, and Jekyll on Windows. Now, it’s time to take the next step—building and previewing your first Jekyll site locally. In this post, you will: Create a new Jekyll site from scratch. Understand the default folder structure of a Jekyll site. Build and serve your site locally, previewing changes in real time. Troubleshoot common issues. By the end of this guide, you will have a fully functional Jekyll site running on your local server, ready for further customization.]]></summary></entry><entry><title type="html">Jekyll Series: Part 1 - Jekyll Setup on Windows</title><link href="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html" rel="alternate" type="text/html" title="Jekyll Series: Part 1 - Jekyll Setup on Windows" /><published>2025-05-09T00:00:00+05:30</published><updated>2025-05-09T00:00:00+05:30</updated><id>http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1</id><content type="html" xml:base="http://localhost:4000/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1.html"><![CDATA[<h1 id="-introduction">📃 Introduction</h1>
 <p>To build a clean, fast, and code-friendly blog or portfolio, <strong>Jekyll</strong> is one of the most versatile tools you can use. As a powerful, Ruby-based static site generator, Jekyll seamlessly integrates with GitHub Pages, allowing you to transform plain text files—written in Markdown or Liquid templates—into fully functional websites without the complexity of databases or server-side scripting.</p>
 
 <p>However, to ensure a smooth and efficient workflow, it’s crucial to set up your local Jekyll environment correctly—especially on Windows, where a few additional steps are necessary. This guide will walk you through the complete setup process, providing clear instructions and troubleshooting tips to help you get Jekyll running flawlessly on your Windows system.</p>
@@ -91,7 +364,11 @@
           <li>Adjusting PATH: Ensure “Git from the command line and 3rd-party software” is selected.</li>
           <li>Line Ending Conversion: Use recommended settings for Windows.</li>
           <li><strong>Tip: Here are the choices I made during setup:</strong>
-<img src="/Techn0tz/assets/images/Default_editor.png" alt="Git welcome" width="400" height="auto" /></li>
+<img src="/Techn0tz/assets/images/Default_editor.png" alt="Git welcome" width="400" height="auto" />
+            <blockquote>
+              <p><strong>Tip</strong> - If you are using VS Code as editor, ensure <strong>VS Code</strong> is installed in your system and proceed with <strong>Git</strong> installation</p>
+            </blockquote>
+          </li>
         </ul>
       </li>
     </ul>
