@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages"
-date: 2025-05-21
+date: 2025-05-22
 categories: Jekyll
 ---
 
