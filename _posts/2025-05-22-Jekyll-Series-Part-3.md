@@ -47,7 +47,7 @@ By the end of this tutorial, you will know how to initialize a Git repository fo
 - Do not initialize with a **README, .gitignore, or license**.
 - Click **"Create Repository"**.
 
-- *Screenshot* - GitHub New Repository creation page
+- *Screenshot* - GitHub New Repository creation page.
 <img src="{{ site.baseurl }}/assets/images/create_repo.png" alt="repo" width="600" height="auto">
 
 ## 🌐 Step 3: Link Local Repository to GitHub
