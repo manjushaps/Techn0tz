@@ -144,7 +144,7 @@ categories: Git
 
 ---
 
-## 💭 Troubleshooting Common Issues
+# 💭 Troubleshooting Common Issues
 
 | **Issue**                                            | **Cause**                            | **Solution**                                                                   |
 | ---------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
@@ -158,7 +158,7 @@ categories: Git
 
 ---
 
-## 📜 Conclusion
+# 📜 Conclusion
 - 🎉Congratulations! You have successfully:
     - Built and served your first Jekyll site locally.
     - Learned how Jekyll automatically updates your site with changes.
