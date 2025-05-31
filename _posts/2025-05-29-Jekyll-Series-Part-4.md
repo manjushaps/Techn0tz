@@ -203,15 +203,15 @@ Your Jekyll blog is now live and running on GitHub Pages! You've successfully go
 ---
 
 > ## 🧠 TechNuggetz
-> Use **`bundle exec jekyll serve --livereload`** to auto-refresh the site on save.
+> ⚡Use **`bundle exec jekyll serve --livereload`** to auto-refresh the site on save.
 >
-> Experiment with themes! Start with **jekyll/minima**, then explore custom themes or GitHub’s theme chooser.
+> ⚡Experiment with themes! Start with **jekyll/minima**, then explore custom themes or GitHub’s theme chooser.
 >
-> Use HTML inside markdown files for advanced formatting.
+> ⚡Use HTML inside markdown files for advanced formatting.
 >
-> Want to blog in multiple categories? Add tags or categories to your posts’ front matter.
+> ⚡Want to blog in multiple categories? Add tags or categories to your posts’ front matter.
 >
-> Commit often with meaningful messages, especially before publishing.
+> ⚡Commit often with meaningful messages, especially before publishing.
 
 ---
 

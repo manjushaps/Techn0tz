@@ -79,6 +79,9 @@
              <!-- Optional: For other pages that are not blog posts -->
               {{ content }} 
           {% endif %}
+          {% if page.layout == "default" and page.path contains "_posts" %}
+            {% include feedback.html %}
+          {% endif %}
         </article>
       </section>
 
