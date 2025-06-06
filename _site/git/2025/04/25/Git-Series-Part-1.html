@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Git Series: Part 1 - Local Version Control | Techn0tz</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Git Series: Part 1 - Local Version Control" />
+<meta name="author" content="Manjushaps" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🚀 From VCS to Git" />
+<meta property="og:description" content="🚀 From VCS to Git" />
+<link rel="canonical" href="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html" />
+<meta property="og:url" content="http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html" />
+<meta property="og:site_name" content="Techn0tz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-25T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Git Series: Part 1 - Local Version Control" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Manjushaps"},"dateModified":"2025-04-25T00:00:00+05:30","datePublished":"2025-04-25T00:00:00+05:30","description":"🚀 From VCS to Git","headline":"Git Series: Part 1 - Local Version Control","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"},"url":"http://localhost:4000/Techn0tz/git/2025/04/25/Git-Series-Part-1.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/Techn0tz/assets/css/style.css?v=7c597516cdde1895e39bf486979c5b85dff75949">
+    <link rel="stylesheet" href="/Techn0tz/assets/css/custom.css?v=1">
+    <script src="/Techn0tz/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/Techn0tz/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+    
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Techn0tz</h1>
+        <p class="header">Empowering self-learners through clean, beginner-friendly tutorials on Git, Jekyll, and more.</p>
+
+        <ul>
+          
+          <li><a class="buttons github" href="https://github.com/manjushaps/techn0tz">View On GitHub</a></li>
+        </ul>
+
+        
+          <p class="header">This project is maintained by <a class="header name" href="https://github.com/manjushaps">manjushaps</a></p>
+        
+
+        
+        <a href="/Techn0tz/feedback/">Feedback Form</a>
+      </header>
+
+      <section>
+        <article class="post">
+          
+            <!-- Top navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"> Previous: Version Control: The Backbone of Modern Development</a> |
+  
+
+  
+     <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"> Next: Git Series: Part 2 - Remote repository - GitHub </a> |
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!-- Post content -->
+            <h1 id="-from-vcs-to-git">🚀 From VCS to Git</h1>
+
+<p>In the last post, we explored Version Control System and their types — CVCS and DVCS. Now, let’s zoom into the most popular DVCS tool in the world: <strong>Git</strong> — and see how it powers modern development.</p>
+
+<hr />
+
+<h1 id="-what-is-git">📜 What is Git?</h1>
+
+<p>Git is open source Distributed Version Control Sytem which allows developers</p>
+<ul>
+  <li>Track changes in code over time</li>
+  <li>Collaborate seamlessly with teammates</li>
+  <li>Create branches for experimental study</li>
+  <li>Roll back to previous versions when things goes wrong</li>
+</ul>
+
+<blockquote>
+  <p>⌛Think of Git as your <strong>projects time machine</strong> - but smarter, faster and made for team work</p>
+</blockquote>
+
+<hr />
+
+<h1 id="-core-components-git-and-lvc-worflow">🎯 Core Components Git and LVC worflow</h1>
+
+<p>The Git workflow is a step-by-step process that defines how changes in a project move from your local machine to a shared, remote repository like GitHub. Mastering this flow helps you collaborate smoothly and  manage versions efficiently.</p>
+
+<p><strong>This post explains about Git basics and how the files are committed locally</strong></p>
+
+<p>The core components of LVC worflow are: <strong>Working Directory, Staging Area, Local Repository</strong>. Understanding how files move through these stages are essential.</p>
+
+<p><img src="/Techn0tz/assets/images/LVC_workflow.png" alt="LVC Workflow" width="500" height="auto" /></p>
+
+<p>The diagram above outlines the LVC process. Now, let’s explore each stage and see how your local project files eventually become committed, shared history.</p>
+
+<h2 id="-working-directory">📂 Working Directory</h2>
+
+<p>This is the local folder on your computer where you edit and work on your project files</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">git init</code></strong> command - Intializes a Git repository
+    <ul>
+      <li>The Git starts tracking the specified folder as a Git project- in other words, your plain folder(working directory) is converted into .Git project</li>
+      <li>Creates a hidden <strong>.git.</strong> folder in the working directory</li>
+      <li>This .git/  folder contains everything that Git needs to track your project (eg. commit, branch, logs etc)</li>
+      <li>Your <strong>working directory stays the same</strong>, but now Git is watching for changes</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="️-staging-area">🗃️ Staging Area</h2>
+
+<p>The staging area (index) is like a holding zone- where Git gathers all the changes that you want to commit</p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">git add</code></strong> command - moves the changes from working directory to the staging area
+    <ul>
+      <li><strong><code class="language-plaintext highlighter-rouge">git add filename</code></strong> - Adds a specific file to the staging area</li>
+      <li><strong><code class="language-plaintext highlighter-rouge">git add .</code></strong> - Adds all the modified files in the folder</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="-local-repository">📁 Local Repository</h2>
+
+<p>The local repository is the <strong>.git directory</strong>- which is the Git’s repository storage</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git commit</code> command - the changes from the staging area are permanently stored in the repository
+    <ul>
+      <li>The repository is located inside the hidden <strong>.git/</strong> folder- the one created by <strong><code class="language-plaintext highlighter-rouge">git init</code></strong></li>
+      <li>The .git directory contains all the commits, project history, branches, logs etc</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="example-snapshot-from-init-to-commit-in-lvc">💡Example Snapshot: From init to commit in LVC</h1>
+
+<p>The snapshot below provides a practical example of how to create a new directory, initialize a Git repository, and set up local version control. It will walk you through the essential steps, including adding files to the staging area, committing changes, and managing version history on your local machine. By following along, you’ll gain hands-on experience in using Git for efficient source code management.</p>
+
+<p><img src="/Techn0tz/assets/images/LVC_snapshot.png" alt="LVC_example" /></p>
+
+<hr />
+
+<h2 id="-technuggetz---did-you-know">🧠 TechNuggetz - Did you Know?</h2>
+
+<blockquote>
+  <p>⌛ <strong>Git</strong> was built by <strong>Linus Torvalds - Founder of Linus</strong> in just 2 weeks in 2005 - Iconic!</p>
+
+  <p>☑️ <strong>Git</strong> knows everything locally, it dosen’t need internet to track changes - from version history, staging and committing - everithing happens in your local machine.</p>
+
+  <p>❌ Made a mistake? <strong><code class="language-plaintext highlighter-rouge">git checkout -- filename</code></strong> - restores a file to its last committed state</p>
+
+  <p>🗂️ Track only what matters! Use a <strong><code class="language-plaintext highlighter-rouge">.gitignore</code></strong> file to prevent sensitive data (like passwords, logs, or config files) from slipping into your commits. A cleaner repo is a safer repo!</p>
+
+  <p>🪄 Autosave magic! Use <strong><code class="language-plaintext highlighter-rouge">git stash</code></strong> to save your work-in-progress without a commit. Come back later with <strong><code class="language-plaintext highlighter-rouge">git stash pop</code></strong> and pick up right where you left off!</p>
+</blockquote>
+
+<p>Continue.. <strong>👉 To push your Git project to Remote repository like GitHub <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-2">Part-2:Remote-repository</a></strong></p>
+
+<p><strong><em>Happy Learning!</em></strong></p>
+
+
+            <!-- Bottom navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"> Previous: Version Control: The Backbone of Modern Development</a> |
+  
+
+  
+     <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"> Next: Git Series: Part 2 - Remote repository - GitHub </a> |
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!--<div class="post-nav-minimal">
+              
+                <a href="/Techn0tz/vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs.html"> Previous: Version Control: The Backbone of Modern Development</a> |
+              
+          
+              <a href="/Techn0tz/"> Up: Home</a> 
+
+              
+               | <a href="/Techn0tz/git/2025/04/25/Git-Series-Part-2.html"> Next: Git Series: Part 2 - Remote repository - GitHub </a>
+              
+            </div>-->
+          
+          
+            <div class="rating-stars" data-post-title="Git Series: Part 1 - Local Version Control">
+  <strong>Enjoyed this post? Rate it! </strong>
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <span id="thanks-msg" style="display:none; margin-left:10px; color:green;">Thanks for rating!</span>
+</div>
+
+<style>
+.rating-stars {
+  font-size: 1.4rem;
+  color:lightcoral;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+.rating-stars .star:hover,
+.rating-stars .star:hover ~ .star {
+  color: #ccc;
+}
+.rating-stars .star.selected,
+.rating-stars .star:hover {
+  color: gold;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const stars = document.querySelectorAll('.rating-stars .star');
+  const thanksMsg = document.getElementById('thanks-msg');
+  const postTitle = document.querySelector('.rating-stars').getAttribute('data-post-title');
+
+  stars.forEach(star => {
+    star.addEventListener('click', function () {
+      const rating = this.getAttribute('data-value');
+      const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKOwRPwSHLzSCr46hOMTvaBfC4XYOS1KlpRxX6nTL9Y0cggQ/formResponse';
+      const ratingField = 'entry.1373542740'; // 🔁 Replace with your actual rating entry ID
+      const titleField = 'entry.636571047';  // 🔁 Replace with your actual post title entry ID
+
+      const formData = new FormData();
+      formData.append(ratingField, rating);
+      formData.append(titleField, postTitle);
+
+      fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        stars.forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        thanksMsg.style.display = 'inline';
+      });
+    });
+  });
+});
+</script>
+
+
+          
+        </article>
+      </section>
+
+      <footer class = "site-footer">
+        <p><small><!--Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme.-->
+        <br>
+        © 2025 Techn0tz. 
+        Content licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        CC BY 4.0</a>. Code under 
+        <a href="https://github.com/manjushaps/techn0tz/blob/main/LICENSE" target="_blank">MIT License</a>.</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
