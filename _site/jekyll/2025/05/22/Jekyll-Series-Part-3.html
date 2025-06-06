@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages | Techn0tz</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages" />
+<meta name="author" content="Manjushaps" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="🔗 Missed Part-1 and Part-2? 👉 Checkout Jekyll Series: Part-1 and Part-2 to get familiar with installing Git, Ruby, Bundler, and Jekyll, and to learn how to build and preview a Jekyll site locally." />
+<meta property="og:description" content="🔗 Missed Part-1 and Part-2? 👉 Checkout Jekyll Series: Part-1 and Part-2 to get familiar with installing Git, Ruby, Bundler, and Jekyll, and to learn how to build and preview a Jekyll site locally." />
+<link rel="canonical" href="https://manjushaps.github.io/Techn0tz/jekyll/2025/05/22/Jekyll-Series-Part-3.html" />
+<meta property="og:url" content="https://manjushaps.github.io/Techn0tz/jekyll/2025/05/22/Jekyll-Series-Part-3.html" />
+<meta property="og:site_name" content="Techn0tz" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-22T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Manjushaps"},"dateModified":"2025-05-22T00:00:00+05:30","datePublished":"2025-05-22T00:00:00+05:30","description":"🔗 Missed Part-1 and Part-2? 👉 Checkout Jekyll Series: Part-1 and Part-2 to get familiar with installing Git, Ruby, Bundler, and Jekyll, and to learn how to build and preview a Jekyll site locally.","headline":"Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages","mainEntityOfPage":{"@type":"WebPage","@id":"https://manjushaps.github.io/Techn0tz/jekyll/2025/05/22/Jekyll-Series-Part-3.html"},"url":"https://manjushaps.github.io/Techn0tz/jekyll/2025/05/22/Jekyll-Series-Part-3.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/Techn0tz/assets/css/style.css?v=ffc37c07ef5f42e2d6312618d801f0485f029a87">
+    <link rel="stylesheet" href="/Techn0tz/assets/css/custom.css?v=1">
+    <script src="/Techn0tz/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/Techn0tz/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+    
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Techn0tz</h1>
+        <p class="header">Empowering self-learners through clean, beginner-friendly tutorials on Git, Jekyll, and more.</p>
+
+        <ul>
+          
+          <li><a class="buttons github" href="https://github.com/manjushaps/techn0tz">View On GitHub</a></li>
+        </ul>
+
+        
+          <p class="header">This project is maintained by <a class="header name" href="https://github.com/manjushaps">manjushaps</a></p>
+        
+
+        
+        <a href="/Techn0tz/feedback/">Feedback Form</a>
+      </header>
+
+      <section>
+        <article class="post">
+          
+            <!-- Top navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2.html"> Previous: Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally</a> |
+  
+
+  
+     <a href="/Techn0tz/jekyll/2025/05/29/Jekyll-Series-Part-4.html"> Next: Jekyll Series: Part 4 - LiveBlog: A Practical Example </a> |
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!-- Post content -->
+            <h2 id="-missed-part-1-and-part-2">🔗 Missed Part-1 and Part-2?</h2>
+<p>👉 Checkout <strong><a href="/Techn0tz/jekyll/2025/05/09/Jekyll-Series-Part-1">Jekyll Series: Part-1</a></strong> and <strong><a href="/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2"> Part-2</a></strong> to get familiar with installing Git, Ruby, Bundler, and Jekyll, and to learn how to build and preview a Jekyll site locally.</p>
+
+<h1 id="-introduction">📃 Introduction</h1>
+
+<p>Welcome to <strong>Part 3 of the Jekyll Series</strong> on <strong>🚀Techn0tz</strong>. In this post, you will learn how to make the Jekyll site you built and previewed locally in <strong>Part 2</strong> live on the internet using GitHub Pages. GitHub Pages is a free and reliable platform for hosting static websites directly from your GitHub repository, making it an ideal choice for Jekyll sites.</p>
+
+<p>By the end of this tutorial, you will know how to initialize a Git repository for your Jekyll site, connect it to a remote GitHub repository, and deploy your site with just a few commands. Whether you’re creating a personal blog or a project site, this guide will help you make your Jekyll site live and accessible to anyone online.</p>
+
+<p><strong><em>🎈Let’s get started!</em></strong></p>
+
+<hr />
+
+<h1 id="-prerequisites">🎯 Prerequisites</h1>
+
+<ul>
+  <li>Before we begin, ensure that you have:
+    <ul>
+      <li><strong>A Jekyll Site</strong> - The Default Jekyll site that you built and tested locally, as covered in <strong><a href="/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2">Part 2</a></strong> of this series.</li>
+      <li><strong>Git Installed</strong> - Git should be properly installed and configured on your system.</li>
+      <li><strong>A GitHub Account</strong> - An active GitHub account, to push your site to a repository.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="-steps-for-deploying-your-site-to-github-pages">📝 Steps for Deploying Your Site to GitHub Pages</h1>
+<h2 id="-step-1-initializing-a-git-repository">🌐 Step 1: Initializing a Git Repository</h2>
+<ul>
+  <li>Navigate to your Jekyll site folder (eg. cd Users ; cd myblog).</li>
+  <li>Initialize a Git repository using <strong><code class="language-plaintext highlighter-rouge">git init</code></strong>.</li>
+  <li>Add all the files using <strong><code class="language-plaintext highlighter-rouge">git add .</code></strong>.</li>
+  <li>
+    <p>Make the initial commit with <strong><code class="language-plaintext highlighter-rouge">git commit -m message</code></strong>.</p>
+  </li>
+  <li><em>Screenshot</em> - Git Bash terminal from init to commit.
+<img src="/Techn0tz/assets/images/init_to_ commit_part3.png" alt="init_commit" width="600" height="auto" /></li>
+</ul>
+
+<h2 id="-step-2-create-a-new-repository-on-github">🌐 Step 2: Create a New Repository on GitHub</h2>
+<ul>
+  <li>Go to <strong>GitHub.com</strong> and log in.</li>
+  <li>Click on the <strong>➕”New Repository”</strong> button.</li>
+  <li>Choose a repository name:
+    <ul>
+      <li>For a User/Organization Site: <strong>your-username.github.io</strong>.</li>
+      <li>For a Project Site: Any other name of your choice.</li>
+    </ul>
+  </li>
+  <li>Set the repository visibility to <strong>“Public” or “Private”</strong> as needed.</li>
+  <li>Do not initialize with a <strong>README, .gitignore, or license</strong>.</li>
+  <li>
+    <p>Click <strong>“Create Repository”</strong>.</p>
+  </li>
+  <li><em>Screenshot</em> - GitHub New Repository creation page.
+<img src="/Techn0tz/assets/images/create_repo.png" alt="repo" width="600" height="auto" /></li>
+</ul>
+
+<h2 id="-step-3-link-local-repository-to-github">🌐 Step 3: Link Local Repository to GitHub</h2>
+<ul>
+  <li>Set the default branch to main using <strong><code class="language-plaintext highlighter-rouge">git branch -M main</code></strong>.</li>
+  <li>
+    <p>Add remote origin using the command <strong><code class="language-plaintext highlighter-rouge">git remote add origin https://github.com/your-username/your-repo-name.git</code></strong>.</p>
+  </li>
+  <li><em>Screenshot</em> - Creating a new GitHub repository for your Jekyll site.
+<img src="/Techn0tz/assets/images/rename_addorigin.png" alt="addorigin" width="600" height="auto" /></li>
+</ul>
+
+<h2 id="-step-4-push-your-site-to-github">🌐 Step 4: Push Your Site to GitHub</h2>
+<ul>
+  <li>
+    <p>Push the code to GitHub using <strong><code class="language-plaintext highlighter-rouge">git push -u origin main</code></strong> and open the Jekyll site folder in VS Code using <strong><code class="language-plaintext highlighter-rouge">code .</code></strong> (or your default text editor).</p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Pushing Jekyll Site to GitHub.
+<img src="/Techn0tz/assets/images/push_originmain.png" alt="pushorigin" width="600" height="auto" /></p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Jekyll site folders in VS Code.
+<img src="/Techn0tz/assets/images/site_vscode_folders.png" alt="vs folders" width="600" height="auto" /></p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Github repository showing the pushed site files.
+<img src="/Techn0tz/assets/images/after_pushorigin.png" alt="afterorigin" width="600" height="auto" /></p>
+  </li>
+</ul>
+
+<h2 id="-step-5--configure-github-pages">🌐 Step 5:  Configure GitHub Pages</h2>
+<ul>
+  <li>Go to your <strong>GitHub repository settings</strong>.</li>
+  <li>Scroll down to the <strong>“Pages”</strong> section.</li>
+  <li>Set the <strong>Source branch (main or gh-pages)</strong> and the <strong>folder (root or docs)</strong>.</li>
+  <li>
+    <p>Click <strong>“Save”</strong>.</p>
+  </li>
+  <li><em>Screenshot</em> - Repository configuration settings.
+<img src="/Techn0tz/assets/images/config_GH.png" alt="GH config" width="600" height="auto" /></li>
+</ul>
+
+<h2 id="-step-6--verify-your-site-is-live">🌐 Step 6:  Verify Your Site is Live</h2>
+<ul>
+  <li>
+    <p>Once configured, GitHub will begin building your site. This may take a few minutes. When the process completes, refresh your browser to view your live site.</p>
+  </li>
+  <li>
+    <p><em>Screenshot</em> - Browser showing the live Jekyll site URL.
+<img src="/Techn0tz/assets/images/live_site_GH.png" alt="live_site" width="600" height="auto" /></p>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="-conclusion">📃 Conclusion</h1>
+<p>In this part, you learned how to take your locally built Jekyll site and successfully deploy it using GitHub Pages. You initialized a Git repository, pushed your code, and configured GitHub Pages — making your site publicly available. With this, your static site is now live on the internet.</p>
+
+<hr />
+
+<h2 id="-technuggetz">💡 Technuggetz</h2>
+<p>Always preview your Jekyll site locally before pushing to GitHub to avoid any build errors.</p>
+
+<hr />
+
+<blockquote>
+  <h2 id="--next-on-techn0tz">🔜  Next on Techn0tz..</h2>
+  <p>In the final part of this Jekyll series, we’ll walk through a complete live example — from creating a new Jekyll site, customizing it, writing blog posts, and deploying it to GitHub Pages with real content.</p>
+
+  <p><strong><em>Stay tuned to Techn0tz!! for the final step in your Jekyll journey.</em></strong></p>
+</blockquote>
+
+
+
+            <!-- Bottom navigation -->
+            <div class="post-nav-minimal">
+  
+    <a href="/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2.html"> Previous: Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally</a> |
+  
+
+  
+     <a href="/Techn0tz/jekyll/2025/05/29/Jekyll-Series-Part-4.html"> Next: Jekyll Series: Part 4 - LiveBlog: A Practical Example </a> |
+  
+
+  <a href="/Techn0tz/"> Up: Home</a>
+</div>
+
+
+            <!--<div class="post-nav-minimal">
+              
+                <a href="/Techn0tz/jekyll/2025/05/15/Jekyll-Series-Part-2.html"> Previous: Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally</a> |
+              
+          
+              <a href="/Techn0tz/"> Up: Home</a> 
+
+              
+               | <a href="/Techn0tz/jekyll/2025/05/29/Jekyll-Series-Part-4.html"> Next: Jekyll Series: Part 4 - LiveBlog: A Practical Example </a>
+              
+            </div>-->
+          
+          
+            <div class="rating-stars" data-post-title="Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages">
+  <strong>Enjoyed this post? Rate it! </strong>
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <span id="thanks-msg" style="display:none; margin-left:10px; color:green;">Thanks for rating!</span>
+</div>
+
+<style>
+.rating-stars {
+  font-size: 1.4rem;
+  color:lightcoral;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+.rating-stars .star:hover,
+.rating-stars .star:hover ~ .star {
+  color: #ccc;
+}
+.rating-stars .star.selected,
+.rating-stars .star:hover {
+  color: gold;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const stars = document.querySelectorAll('.rating-stars .star');
+  const thanksMsg = document.getElementById('thanks-msg');
+  const postTitle = document.querySelector('.rating-stars').getAttribute('data-post-title');
+
+  stars.forEach(star => {
+    star.addEventListener('click', function () {
+      const rating = this.getAttribute('data-value');
+      const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKOwRPwSHLzSCr46hOMTvaBfC4XYOS1KlpRxX6nTL9Y0cggQ/formResponse';
+      const ratingField = 'entry.1373542740'; // 🔁 Replace with your actual rating entry ID
+      const titleField = 'entry.636571047';  // 🔁 Replace with your actual post title entry ID
+
+      const formData = new FormData();
+      formData.append(ratingField, rating);
+      formData.append(titleField, postTitle);
+
+      fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        stars.forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        thanksMsg.style.display = 'inline';
+      });
+    });
+  });
+});
+</script>
+
+
+          
+        </article>
+      </section>
+
+      <footer class = "site-footer">
+        <p><small><!--Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme.-->
+        <br>
+        © 2025 Techn0tz. 
+        Content licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+        CC BY 4.0</a>. Code under 
+        <a href="https://github.com/manjushaps/techn0tz/blob/main/LICENSE" target="_blank">MIT License</a>.</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
