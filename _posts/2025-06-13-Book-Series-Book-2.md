@@ -153,4 +153,4 @@ Whether you’re facing noise, uncertainty, or change — these reflections rema
 
 We’re not done yet. **Stay tuned on Techn0tz** for **Meditations – Book Three**, where the reflections grow sharper, the fragments shorter, and the honesty deeper.
 
-<img src="{{ site.baseurl }}/assets/images/Book_two_post.png" alt="soul" width="500" height="auto">
+<img src="{{ site.baseurl }}/assets/images/Book_two_post.png" alt="soul" width="600" height="auto">
