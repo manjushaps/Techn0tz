@@ -3,6 +3,7 @@ layout: default
 title: "Git Series: Part 3 - Branching and Merging"
 date: 2025-05-02
 categories: Git 
+tags: [Git, Git Series, Branching, Merging, Workflow]
 ---
 
 # 📁How Git stores Data?

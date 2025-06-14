@@ -3,6 +3,7 @@ layout: default
 title: "Book Series - Meditations: Book One"
 date: 2025-06-06
 categories: Book
+tags: [Meditations, Stoicism, Philosophy, Book One, Self-Reflection, Marcus Aurelius]
 ---
 
 # 📃Introduction

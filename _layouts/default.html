@@ -58,6 +58,15 @@
             <!-- Top navigation -->
             {% include post-navigation.html %}
 
+            <!-- Post tags -->
+            {% if page.tags %}
+              <p class="post-tags">
+                {% for tag in page.tags %}
+                  <a class="tag-link" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+
             <!-- Post content -->
             {{ content }}
 

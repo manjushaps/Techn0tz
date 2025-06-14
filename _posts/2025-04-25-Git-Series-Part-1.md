@@ -3,6 +3,7 @@ layout: default
 title: "Git Series: Part 1 - Local Version Control"
 date: 2025-04-25
 categories: Git 
+tags: [Git, Git Series, Version Control, Local Repository, Beginners]
 ---
 
 # 🚀 From VCS to Git

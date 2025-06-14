@@ -3,6 +3,7 @@ layout: default
 title: "Book Series - Meditations: Book Two"
 date: 2025-06-13
 categories: Book
+tags: [Meditations, Stoicism, Philosophy, Book Two, Wisdom, Inner Life]
 ---
 
 # 📃Introduction

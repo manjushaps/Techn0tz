@@ -3,6 +3,7 @@ layout: default
 title: "Git Series: Part 2 - Remote repository - GitHub"
 date: 2025-04-25
 categories: Git 
+tags: [Git Series, Git, GitHub, Remote Repository, Workflow]
 ---
 
 ## 🔗 Missed Part-1 ?
