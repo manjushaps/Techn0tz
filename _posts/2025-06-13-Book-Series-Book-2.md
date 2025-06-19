@@ -152,6 +152,8 @@ From the battlefield near the Granua to our busy modern lives, Marcus’s words 
 
 Whether you’re facing noise, uncertainty, or change — these reflections remain steady companions.
 
-We’re not done yet. **Stay tuned on Techn0tz** for **Meditations – Book Three**, where the reflections grow sharper, the fragments shorter, and the honesty deeper.
+We’re not done yet. Taking a short pause from Meditations — up next on **Techn0tz**, we’ll be back in code mode with a practical guide to deploying Jekyll blog on **Netlify**.
+
+**Book Three of Meditations** will follow soon after — shorter reflections, sharper insights!
 
 <img src="{{ site.baseurl }}/assets/images/Book_two_post.png" alt="soul" width="600" height="auto">
