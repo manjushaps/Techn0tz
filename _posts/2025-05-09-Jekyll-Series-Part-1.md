@@ -2,6 +2,7 @@
 layout: default
 title: "Jekyll Series: Part 1 - Jekyll Setup on Windows"
 date: 2025-05-09
+author: manjushaps
 categories: Jekyll
 tags: [Jekyll, Setup Guide, Windows, Ruby, Bundler, Blogging Tools]
 ---

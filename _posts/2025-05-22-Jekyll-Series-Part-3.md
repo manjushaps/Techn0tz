@@ -2,6 +2,7 @@
 layout: default
 title: "Jekyll Series: Part 3 - Deploy your Jekyll Site to GitHub Pages"
 date: 2025-05-22
+author: manjushaps
 categories: Jekyll
 tags: [Jekyll, GitHub Pages, Deployment, Static Site, Hosting, Git]
 ---

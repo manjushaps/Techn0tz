@@ -2,6 +2,7 @@
 layout: default
 title: "Jekyll Series: Deploy Jekyll Site From GitHub to Netlify"
 date: 2025-06-19
+author: manjushaps
 categories: [Jekyll , Deployment]
 tags: [Netlify, Jekyll, GitHub, Custom Domain, HTTPS, JAMstack, Static Sites, Self Learner]
 ---
